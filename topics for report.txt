@@ -1,0 +1,39 @@
+ declaration - (1)
+ acknowledgement -(1) 
+ approval certificate -(1)
+cover - (1)
+abstract -(1)
+contents- (2)
+intro - (2)
+open edx architec - (3)
+xblock -(2/3)
+html editor - (3)
+challenges - (2)
+references - (1)
+list of fig -(1)
+conclusion -(1)
+future work - (1)
+screenshots - (12-15)
+
+tot :  (35)
+
+---------------------------------------------- 
+
+technologie used - (1/2)
+approach 1
+          - local intregation(1/2)
+          - intregation 
+                 devstack installation - (1/2)
+                  intregation - (1/2)
+        
+          - issues and solution - (2)
+          - what was the thought about alternative approach (quills, notepad++) - (1)
+          - why approach was ommited and transiiion to approach 2 - (2)
+
+
+approach final 
+              - developing an xblocks/class diagram etc (2/3)
+              -  implementaion(2)
+              -installing on devstack (1)
+              - issues and solution - (1/2) 
+                              
