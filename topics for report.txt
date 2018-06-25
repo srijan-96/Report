@@ -21,7 +21,7 @@ tot :  (35)
 
 technologie used - (1/2)
 approach 1
-          - obswrvation and thought behind local intregation(1/2)
+          - observation and thought behind local intregation plus local integation implementaion(2/3)
           - intregation with open edx
                  devstack installation - (1/2)
                   intregation - (1/2)
