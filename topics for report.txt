@@ -21,18 +21,18 @@ tot :  (35)
 
 technologie used - (1/2)
 approach 1
-          - local intregation(1/2)
-          - intregation 
+          - obswrvation and thought behind local intregation(1/2)
+          - intregation with open edx
                  devstack installation - (1/2)
                   intregation - (1/2)
         
           - issues and solution - (2)
           - what was the thought about alternative approach (quills, notepad++) - (1)
-          - why approach was ommited and transiiion to approach 2 - (2)
+          - why approach was ommited and transition to approach 2 - (2)
 
 
 approach final 
-              - developing an xblocks/class diagram etc (2/3)
+              - developing an xblocks   /    class diagram etc (2/3)
               -  implementaion(2)
               -installing on devstack (1)
               - issues and solution - (1/2) 
