@@ -27,7 +27,6 @@ approach 1
                   intregation - (1/2)
         
           - issues and solution - (2)
-          - what was the thought about alternative approach (quills, notepad++) - (1)
           - why approach was ommited and transition to approach 2 - (2)
 
 
