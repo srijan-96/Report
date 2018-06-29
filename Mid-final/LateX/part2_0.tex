@@ -1,0 +1,269 @@
+\chapter{Getting started}
+\section{Limitations of the present HTML editor in OpenEdx}
+Open edX in itself is a humongous learning management system with unparalleled feature list. It is
+among the top MOOCs platforms in the world. As it is the way of the world, there is nothing perfect
+here and Open edX is not an exception. All applications/platforms have a scope to enhance its
+features and abilities of its components. In this project we worked on enhancing the HTML
+component which is used for content creation in courses.\newline\newline
+While current HTML editor does the job well but it has got its own mind and behaves with
+uncertainty sometimes. Enhancing the editor with internal CSS and ironing out the indentation
+issues will boost the user experience of the course creator. Our aim was to develop and integrate a
+full-fledged HTML editor like Notepad++ or Sublime for Open edX.\newline\newline
+Here are some issues that we have encountered in the HTML editor used by the OpenEdx platform
+\begin{enumerate}
+  \item \textbf{Indentaion in the current HTML editor :-}\newline\newline
+The purpose of code indentation and style is to make the program more readable and
+understandable. It saves lots of time while we revisit the code and use it.
+Code indentaion in an important part towards increasing the aesthetic of any editor,
+as it increases readability and makes understanding of the code easier.\newline\newline
+In Open edX however the code indentation feature is not implemented in the raw
+HTML editor, which is the CodeMirror v3.21.0. This is mainly because the version
+of CodeMirror used in Open edX has been implemented with a minimalistic use case
+and has not been updated since October 2015. The problem is that even if we
+manually indent our code, once we save our progress and close the raw editor, the
+indentation is lost i.e it doesn’t gets saved. The screenshots regarding this issue can
+be found under the List of figures page.
+
+  \item \textbf{Code Folding in the current HTML editor :-}\newline\newline
+Code folding is a feature of some text editors, source code editors, and IDEs that
+allows the user to selectively hide and display – "fold" – sections of a currentlyedited
+file as a part of routine edit operations. This allows the user to manage large
+amounts of text while viewing only those subsections of the text that are specifically
+relevant at any given time.\newline\newline
+This is a pretty useful feature for any editor and presents the user with various use
+patterns, primarily organizing code or hiding less useful information so one can
+focus on more important information. Sinc the CodeMirror version implemented in
+Open edX is very old this feature is not available and thus was added to our List of
+possible enhancements.
+
+  \item \textbf{Internal CSS in HTML Code :-}\newline\newline
+Cascading Style Sheets (CSS) is a style sheet language used for describing the
+presentation of a document written in a markup language like HTML CSS is a
+cornerstone technology of the World Wide Web alongside HTML and JavaScript.\newline\newline
+The three main types of CSS styles are inline, internal and external. Currently in
+Open edX platform in the raw HTML editor only inline or embedded CSS support is
+available. Inline styles are CSS styles that are applied directly in the page's HTML.
+Because inline styles they are the most specific in the cascade, they can over-ride
+things we didn't intend them to. They also negate one of the most powerful aspects
+of CSS - the ability to style lots and lots of web pages from one central CSS file to
+make future updates and style changes much easier to manage.\newline\newline
+If we had to only use inline styles, our documents would quickly become bloated and
+very hard to maintain. This is because inline styles must be applied to every element
+we want them on. That is why internal CSS is preferred whenever exhaustive use of
+CSS is required as opposed to inline CSS. Internal CSS is Open edx raw HTML
+editor is not supported as internal CSS must be defined inside the style tag in the
+head element of the html body. However the raw HTML editor of Open edX stips
+down style tags and the effects are not reflected as wanted. Styles of other
+components in the web page also gets changed which we do not want. Thus allowing
+internal CSS is an important enhancement criterion which should be addressed.
+\end{enumerate}
+
+To understand the limitations better we have provided the screenshots as mentioned
+below:
+\begin{center}\textbf{[See Figures 1-4 in the “Figures and Screenshots” section.]}\end{center}
+
+
+\section{Objectives}
+Here are the list of enhancements we were aiming for in the html component of Open edX:
+\begin{itemize}
+  \item Improvise the raw HTML editor to have features like pretty indentation, code folding
+etc.
+  \item Check if we can add a separate CSS section in raw HTML editor to eliminate inline
+CSS
+\item Fix the cursor placement issue and some other minor issues.
+\end{itemize}
+
+\section{Observations}
+Regarding the Open edX paltform and the editors used in the Open Edx one might come up with thefollowing kind of questions
+\begin{itemize}
+\item Is OpenEdx using a raw editor or visual editor or both ?
+\item Did OpenEdx write their own editor ?
+\item If yes, then what is its working ?
+\item If no, then from where have they have implemented their text editors
+\item What kind of editor are they using ?
+\item Where do we find the editors source code ?
+\item How many editors are they using ?
+\item Their method of working ?
+\item Their current scenario ?
+\item On what bias is this editor working along with the OpenEdx platform ?\newline\newline
+\end{itemize}
+
+
+To all these queries here are some facts that would be helpful:
+\begin{enumerate}
+\item OpenEdx uses both the visual editor as well as the raw editor.
+\item OpenEdx has not written their own editor neither the visual editor nor the raw editor.
+\item OpenEdx uses open source text editors for this purpose.
+\item The visual editor is tinyMCE editor and the raw editor is CodeMirror Editor.
+\item These editors are located in edx source code, in github.
+\item CodeMirror is made to work in the custom mode configuration. OpenEdx is using a very old version of CodeMirror.
+\item The tinymce editor folder of openedx consists of a plugin called "codemirror-fortinymce".
+\item The good thing about this plugin is that any version of codemirror can be used in the code and it will work perfectly fine.
+\item The “codemirror-for-tinymce” plugin is already in use in the OpenEdx repository.
+\item We can use the “codemirror-for-tinymce” plugin for tinymce 4.x.x versions.
+\item There is an xblock module or simply an xblock called html-module.py
+\item This particular xblock module handles the operation of the html editor in opened
+\item This is the module that loads the html editor widget and configures both (tinymce and codemirror) editors to work hand in hand with the help of “codemirror” plugin for tinymce.
+\end{enumerate}
+
+
+\section{Our plan of action}
+
+Depending on the facts that we uncovered regarding the html editors we have come up with
+two possible approaches initially that would fulfill our required objectives.
+\begin{enumerate}
+
+\item\textbf{Approach 1}\newline Updating the present version of WYSIWYG and raw HTML editors in Open
+edX
+\item\textbf{Approach 2}\newline Integrating other third party open source text editors into OpenEdx platform.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Approach 1 – Enhancing the present raw HTML editor itself
+in the edx-platform Part I- Local intregation}
+\section{Updating the present version of Editors present in Open edX}
+Our first approach was to download the latest versions of TinyMCE, CodeMirror and
+the plugin “codemirror-for-tinymce” from their respective git repositories into our local
+Machine.\newline
+Next step was to integated the two editors i.e., CodeMirror and TinyMCE using the plugin and
+tested ito n our local machine, and later integrate it with Open edX using one of the Open edX developing
+environment.\newline
+The result would be TinyMCE loading the instance of latest version of CodeMirror as its
+raw HTML editor.
+However this implementation could only solve the indentation and code folding problem,
+but still the internal css problem wouldn’t be solved just with this.\newline\newline
+For enabling the internal CSS we thought of two possible implementations:
+\begin{enumerate}
+\item\textbf{Using Iframes}\newline
+For this, we were planning to wrap the entire html content inside an iframe
+and add theming to the iframe.
+\begin{itemize}
+\item Set the width of iframe to 100\%
+\item Set the height of iframe equal to the height of content of iframe
+\item Set the border of iframe to zero/none
+\item Open all hyperlinks within the iframe in new tab
+\end{itemize}
+Hence the expected result is an invisible iframe holding our HTML content.
+
+
+
+\item\textbf{Using JavaScript}\newline
+This is a slightly tough and critical approach, which was to apply CSS using
+JavaScript. The plan was to separate out CSS part from HTML content and
+wrap the entire content in a html div tag with an unique id.
+Next we would have to manually select each and every child of the div by
+parsing the DOM (Document Object Model) tree and apply styles to it.\newline
+\end{enumerate}
+
+We opted for the first i.e the Iframe approach because of the following reasons:
+\begin{enumerate}
+\item This method allows the course content creator to include third party CSS such as
+bootstrap, w3css which will make the course even more beautiful
+\item Implementaion is easier
+\item Wrapping data inside the iframes containerizes the data ensuring no mixing of
+CSS between two HTML blocks in LMS.
+\item The overhead of the second approach will be however very large, since parsing
+the DOM tree would take considerable amount of time and effort.
+\end{enumerate}
+
+
+\section{Implementation of our Local intregation}
+In the first phase of implementing our approach1 of updating the present editors, we
+first downloaded both the editors onto our local machine and then integrated the latest
+version of CodeMirror and TinyMCE in our local machine. Later we integrated it with
+Django framework since Open edX uses Django framework in the back end as their Web
+Application Framework. This step was done to give us a better insight into the interaction of
+the present editors in Open edX with Django. The steps of our implementation are
+mentioned in brief below:
+\begin{enumerate}
+\item Firstly, we have download the latest version of CodeMirror and TinyMCE from their
+github repositores and then tested them individually to check whether all the desired features
+are working or not.
+\item Secondly, we had download the latest version of the “codemirror-for-tinymce” plugin
+from its git repo.
+\item Next we had replaced the default raw HTML editor of TinyMCE with our instance of the
+latest version of CodeMirror. This was done by configuring the init-tinymce.js file to use
+CodeMirror as an external plugin and thus load it as its default raw HTML editor.
+\item Later, for enabling the internal CSS we had encapsulated the entire html content of the
+editor into an iframe.
+\item We have then set the width of the iframe to 100 percent and set the height of the iframe
+equal to the height of the html content.
+\item  We had made sure that the borders of iframe was set to zero to make it invisible so that
+the user experience is better and smooth.
+\item After completing our stand alone integration we merged it with a Django project to run
+our editor as an app in the Django server. This intregation was quite useful as Open edX
+itself uses Django framework in its backend and it helped us in understanding about the
+Django back end of Open edX.
+\end{enumerate}
+
+
+\section{Summary of our local intregation}
+After completing our local integration, firstly we have tested our local instances of
+TinyMCE and CodeMirror on the Django server. A brief summary of our observations are
+listed below.
+\begin{enumerate}
+\item Most of the HTML tags and their atrributes are working fine. Some of the exceptions
+being script tag , audio tag etc.
+\item Almost every CSS style and attributes work fine. The exceptions are those style features
+which by default require a script tag to be implemented.
+\item CSS animations can be implemented and other third party HTML-and CSS -based design
+templates such as Bootstrap can be linked and used without any error.
+\item We prepared a detailed Test Report which can be found here:\newline[\url{https://docs.google.com/spreadsheets/d/1AJQWfAG2NIjpxFZt2fnLPlKdhP2-q35KZ0DOmdb-F0w/edit#gid=0}]
+\item  Source code is available in our github repository here:\newline[\url{https://github.com/ashutoshbsathe/codemirror-in-tinymce}]
+\end{enumerate}
+
+
+\section{Issues faced and solutions}
+\begin{enumerate}
+
+\item\textbf{AJAX:}\newline\newline
+We had no idea about how to pass data between RESTful APIs at first. Then later we
+found out that this can be done via a request called as AJAX which basically passes
+the data in JSON format from one API to another API. And hence we used the same.
+On a button click in our html, we would send the AJAX query from webpage to
+Django backend. While this seems easy at first, it is a bit tricky when we are using
+only a single text area and not entire form element. So the main problem was our
+csrf\_token was not being set correctly since we were not using a form. So we
+decided to completely skip the csrf authentication by adding @csrf\_exempt
+decorator to our view
+
+\item\textbf{Stripping of style tags:}\newline\newline
+So tinyMCE does not allow you to directly add CSS in your html. It will constantly
+filter out your own \verb=<style>= and \verb=<link>= tags out of it’s display content. The only way
+to get around this is by setting valid\_children, valid\_elements and
+extended\_valid\_elements properly in TinyMCE config.
+
+\item\textbf{Indentation in the “CodeMirror with TinyMCE setup” :}\newline\newline
+Now because the tinymce keeps filtering out content, there’s no actual way to show a
+nice indented code in CodeMirror. For this we found a script that will indent our
+html code nicely and we called it before setting the content in CodeMirror. One thing
+to note here is that whatever indentation that was done in CodeMirror was a bit of a
+pseudo Indentation and not true indentation as the course creator wants. Sure, it was
+nicely indented, but if somewhere content creator specifically wanted a specific tag
+on multiple line such as
+\begin{verbatim}
+<a href=”https://www.google.com”>
+A SearchEngine
+</a>
+\end{verbatim}
+It won’t be rendered in that way because the script treats anchor tag as a single-line
+tag and it will be rendered as follows:
+\begin{verbatim}
+<a href=”https://www.google.com”>ASearchEngine</a>
+\end{verbatim}
+Sadly enough, there is no way for tinyMCE to shut down it’s content filtering and
+hence this issue remains unsolved.
+
+
+\item\textbf{Unnecessary modification of html code:}\newline\newline
+This issue specifically occurs when you try to edit something that was added in raw
+mode. For example, let’s hope you add a nice CSS animation and then return back to
+tinyMCE for saving the content, while returning back, you accidently clicked in the
+div of your animation and you pressed enter. Then tinymce will try to split your div
+in half breaking it where you pressed enter, and will also add some bad html code
+which you definitely don’t want. Again this issue is unavoidable because of content
+filtering algorithms used in tinyMCE.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
