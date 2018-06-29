@@ -248,3 +248,64 @@ To get help for the XBlock SDK runserver command, we can run the following
 command.
 \begin{center}\verb=(venv) $ python xblock-sdk/manage.py help=\end{center}
 The command window lists and describes the available commands.
+
+
+
+\section{Customizing our XBlock}
+\begin{enumerate}
+\item \textbf{Define Fields:}\newline
+The first step in this process is defining field, so, the data of these field types will be
+stored by the xblock.
+\item\textbf{ Define Views:}\newline
+The Views are needed to create HTML pages to display blocks in the course page. It
+is simple to render html pages but its difficult to show what we want on the course
+page. The view also takes the help of CSS and JavaScript to help the html pages.
+\item \textbf{Define Handlers:}\newline
+When course web pages are interactive, we will get events from the Javascript to
+handle. So, handler is a function to respond to a specific URL. Here we can use the
+URL to comumicate with the server too.
+\end{enumerate}
+
+
+%\section{Rendering courseware using XBlocks}
+%\subsection{Sequence diagram}
+
+%\begin{figure}[!]
+%	\includegraphics[width=\linewidth]{images/Render Courseware Page - Sequence Diagram.png}
+%	\caption{Rendering of courseware using XBlocks}
+%	\label{Fig.1:Sequence diagram}
+%\end{figure}
+
+
+\section{Testing and Installing Created XBlock}
+\subsection{For Workbench}
+We can test a xblock, while running with edX or workbench. Install the xblock using following
+commands and start as a local server, and open the browser to find the link for new xblock
+\begin{enumerate}
+\item Go to the root directory of new created xblock.
+\item Type in the following commands\begin{center}\verb= pip install -e name of xblock=\end{center}
+\item run the workbench as a local server using command python manage.py
+runserver
+\end{enumerate}
+
+
+\subsection{For Open edX instance}
+Clone the repository on our local machine. Testing this first on devstack is always recommended
+\begin{enumerate}
+\item Enter the shell of your devstack and execute :
+\begin{center}\verb= sudo -u edxapp /edx/bin/pip.edxapp install /path/to/cloned/directory=\end{center}
+\textbf{Note:} You need to point pip to the directory containing setup.py of our project.\newline For
+example: If we cloned this repo in directory called\textbf{ /home/edx/advhtmlxblock} and
+\textbf{/home/edx/advhtmlxblock/setup.py}is present then\textbf{ /home/edx/advhtmlxblock} is your
+required path
+\item (Re)start your LMS and CMS.
+\item Login to studio as staff
+\item Go to "Advanced Settings" in your course
+\item Add word advancedhtml to list of "Advanced Modules"
+\item Save changes
+\item Advanced HTML component should be present in "Advanced" section in your course.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
