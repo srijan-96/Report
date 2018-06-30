@@ -21,18 +21,17 @@ HTML editor, which is the CodeMirror v3.21.0. This is mainly because the version
 of CodeMirror used in Open edX has been implemented with a minimalistic use case
 and has not been updated since October 2015. The problem is that even if we
 manually indent our code, once we save our progress and close the raw editor, the
-indentation is lost i.e it doesn’t gets saved. The screenshots regarding this issue can
-be found under the List of figures page.
+indentation is lost i.e it doesn’t gets saved. 
 
   \item \textbf{Code Folding in the current HTML editor :-}\newline\newline
 Code folding is a feature of some text editors, source code editors, and IDEs that
-allows the user to selectively hide and display – "fold" – sections of a currentlyedited
+allows the user to selectively hide and display – "fold" – sections of a currently edited
 file as a part of routine edit operations. This allows the user to manage large
 amounts of text while viewing only those subsections of the text that are specifically
 relevant at any given time.\newline\newline
 This is a pretty useful feature for any editor and presents the user with various use
 patterns, primarily organizing code or hiding less useful information so one can
-focus on more important information. Sinc the CodeMirror version implemented in
+focus on more important information. Since the CodeMirror version implemented in
 Open edX is very old this feature is not available and thus was added to our List of
 possible enhancements.
 
@@ -78,14 +77,14 @@ Regarding the Open edX paltform and the editors used in the Open Edx one might c
 \begin{itemize}
 \item Is OpenEdx using a raw editor or visual editor or both ?
 \item Did OpenEdx write their own editor ?
-\item If yes, then what is its working ?
-\item If no, then from where have they have implemented their text editors
+\item If yes, then what how is it working ?
+\item If no, then from where they have implemented their text editors
 \item What kind of editor are they using ?
 \item Where do we find the editors source code ?
 \item How many editors are they using ?
 \item Their method of working ?
 \item Their current scenario ?
-\item On what bias is this editor working along with the OpenEdx platform ?\newline\newline
+\item On what basis is this editor working along with the OpenEdx platform ?\newline\newline
 \end{itemize}
 
 
@@ -97,12 +96,12 @@ To all these queries here are some facts that would be helpful:
 \item The visual editor is tinyMCE editor and the raw editor is CodeMirror Editor.
 \item These editors are located in edx source code, in github.
 \item CodeMirror is made to work in the custom mode configuration. OpenEdx is using a very old version of CodeMirror.
-\item The tinymce editor folder of openedx consists of a plugin called "codemirror-fortinymce".
+\item The tinymce editor folder of openedx consists of a plugin called "codemirror-for-tinymce".
 \item The good thing about this plugin is that any version of codemirror can be used in the code and it will work perfectly fine.
 \item The “codemirror-for-tinymce” plugin is already in use in the OpenEdx repository.
 \item We can use the “codemirror-for-tinymce” plugin for tinymce 4.x.x versions.
 \item There is an xblock module or simply an xblock called html-module.py
-\item This particular xblock module handles the operation of the html editor in opened
+\item This particular xblock module handles the operation of the html editor.
 \item This is the module that loads the html editor widget and configures both (tinymce and codemirror) editors to work hand in hand with the help of “codemirror” plugin for tinymce.
 \end{enumerate}
 
@@ -110,7 +109,7 @@ To all these queries here are some facts that would be helpful:
 \section{Our plan of action}
 
 Depending on the facts that we uncovered regarding the html editors we have come up with
-two possible approaches initially that would fulfill our required objectives.
+two possible approaches initially, that would fulfill our required objectives.
 \begin{enumerate}
 
 \item\textbf{Approach I}\newline Updating the present version of WYSIWYG and raw HTML editors in Open
@@ -125,8 +124,8 @@ edX
 Our first approach was to download the latest versions of TinyMCE, CodeMirror and
 the plugin “codemirror-for-tinymce” from their respective git repositories into our local
 Machine.\newline
-Next step was to integated the two editors i.e., CodeMirror and TinyMCE using the plugin and
-tested ito n our local machine, and later integrate it with Open edX using one of the Open edX developing
+Next step was to intregate the two editors i.e., CodeMirror and TinyMCE using the plugin and
+test it on our local machine, and later integrate it with Open edX using one of the Open edX developing
 environment.\newline
 The result would be TinyMCE loading the instance of latest version of CodeMirror as its
 raw HTML editor.
