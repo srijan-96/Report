@@ -1,13 +1,12 @@
 \documentclass[a4paper, twosided, openany]{memoir}
 \usepackage{hyperref}
 \hypersetup{
-  colorlinks,
-    linkcolor={black},
-    citecolor={black},
-    urlcolor={blue}
+	colorlinks,
+	   linkcolor={black},
+           citecolor={black},
+           urlcolor={blue}
 }
 \usepackage{graphicx}
-%\graphicspath{ {./images/} }
 
 \setlrmarginsandblock{3cm}{2.5cm}{*}
 \setulmarginsandblock{2.5cm}{2.5cm}{*}
@@ -25,22 +24,22 @@
 
 \maketitle
 
-\pagebreak
-
-\begin{abstract}
+\chapter*{Abstract}
 The project focuses on enhancing the open edx html component. Current html component does not
 allow a fully fledged html, css and javascript content to be added in course. Also the html editor of
 the current component is not very user friendly and lacks some fundamental functionalities such as
 code indentation, code folding etc. Our first approaach was to modify openedx system itself and
 thus changing the html editor for all users. Lateron we decided to move to devloping an xblock for
 this and hence making it optional. We also added extra features to enahance the functionality of
-xblock. These extra features include live previewing the html content along with editor.
-\end{abstract}
+xblock. These extra features include live previewing the html content along with editor.\newline
+\par\fancybreak{$***$}\par
 
-\pagebreak
+% Using newpage instead of pagebreak keeps the vertical alginment
+% pagebreak will spread the content all over the page and that is why we had center alignment before
+% This completely fixes it
+\newpage
 
-\renewcommand{\abstractname}{Acknowledgements}
-\begin{abstract}
+\chapter*{Acknowledgement}
 	We, the summer interns of this group, are overwhelmed in all humbleness and
 gratefulness to acknowledge our deep gratitude to all those who have helped us put
 our ideas to perfection and have assigned tasks well above the level of simplicity and
@@ -55,23 +54,16 @@ our tasks properly and were up to the mark in all the tasks assigned. During the
 process, we got a chance to see the stronger side of our technical and nontechnical
 aspects and also strengthen our concepts.
 Last but not the least, we wholeheartedly thank all our other colleagues working in
-different projects under Prof. D.B Phatak for helping us evolve better with their critical advice.
-\end{abstract}
-
-\pagebreak
+different projects under Prof. D.B Phatak for helping us evolve better with their critical advice.\newline
+\par\fancybreak{$***$}\par
+\newpage
 
 \tableofcontents
 
 \mainmatter
 
 \include{part1}
-\include{part2_0}
-\include{part3}
-\include{devstack}
 \include{part2_1}
+\include{devstack}
 \include{advancedhtmlxblock}
-\include{conclusion}
-\include{futurework}
-\include{part2_2}
-
 \end{document}
