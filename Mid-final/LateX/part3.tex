@@ -12,7 +12,7 @@ easily accessible. So we also thought of trying to import the logic they used in
 code to add features such as code indentation ,code folding etc. We put this approach as our
 backup for our approach1 because, approach2 is a bit hacky and complicated to implement
 compared to approach1. 
-\section{ Other similar editors (title required)}  
+\section{What kind of editors do we want?}  
 Before integrating here are some of the questions that we asked ourselves. \newline
 \begin{itemize}
 \item What kind of editor do we want...??
@@ -63,7 +63,7 @@ As of now the current version of the Notepad++ available in the market is v7.5.6
 \item Macro recording and playback.
 \item Bookmark.  \newline
 \end{enumerate}
-\subsection{Obsrvations Made} 
+\subsection{Observations Made} 
 Here are a list of things that we have found about notepad++ : 
 \begin{itemize}
 \item Scintilla is the main component of Notepad++ which is very powerful.
@@ -73,86 +73,11 @@ Here are a list of things that we have found about notepad++ :
 \item Some files where the required changes are to be made and importing those files so they can
 be used in building an editor for OpenEdx platform. \newline
 \end{itemize}  
-\subsection{Links}
-Here are some links that would be helpful in knowing where the required code snippet
-regarding styling, language, etc, are present related to notepad++. \newline
-\begin{itemize}
-\item SOURCE CODE :-  
-\begin{center}
-The source code of notepad++ is available on github repository :- \newline
- [\url{https://github.com/notepad-plus-plus/notepad-plus-plus}]
-\end{center}
-\item INDENTATION CODE :-  
-\begin{center}
-The code regarding where the logic of notepad++ indentation is available is below:  \newline 
-[\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/
-lexlib/Accessor.cxx}]
-\end{center}
-\begin{center}
-The code regarding where the logic of Syntax Folding is present is below:  \newline
- [\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/lexers/LexVerilog.cxx}]
-\end{center}
-\begin{center}
-The code regarding where the logic of Syntax Higlighting , Detecting
-Comments(both single \& multi line comments) , Initialization of indentation level is
-present is below :  \newline 
- [\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/
-lexers/LexKVIrc.cxx}]
-\end{center}
-\begin{center}
-The below link provides reference to the code where the functions regarding all the
-above functions of indendation are included:  \newline
-  [\url{https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/scintilla/lexlib}]
-\end{center}
-\item LEX FILES :-  \newline
-\begin{center}
-The code for regeneration of the files of the source code based on the comments is
-found in the below link:  \newline
-  [\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/scripts/FileGenerator.py}]
-\end{center}
-\begin{center}
-Code relating to all the Lex filesis present in the below link:  \newline
-  [\url{https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/scintilla/scripts}]
-\end{center}
-\item FONTS AND COLOUR STYLING :- \newline
-\begin{center}
-Code relating the available fonts in the editor and scolour styling for each font is
-present in the below link:  \newline
- [\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/src/Style.cxx}]
-\end{center}
-\item AUTO COMPLETION :-   
-\begin{center}
-Code relating the Auto Completion feature is present in the below link:  \newline
-[\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/src/AutoComplete.cxx}]
-\end{center}
-\item SPARSING OF STYLES :-  
-\begin{center}
-The code for storing the sparsed fonts and colour styling is done in the below link:  \newline
-[\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/src/RunStyles.cxx}]
-\end{center}
-\item LINE MARKER :- 
-\begin{center}
-Code relating the numbering the lines of code is present in the below link: \newline 
-[\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/src/LineMarker.cxx}]
-\end{center}
-\item DECORATION :-  
-\begin{center}
-Code relating the Decoration style and the visual elements that are added over text is
-present in the below link:  \newline
- [\url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/src/Decoration.cxx}]
-\end{center}
-\item LANGUAGES :-  s
-\begin{center}
-The code regarding the identification of various languages such as Perl, Ruby,
-HTML, CSS , JS ,etc, is found in the below link:  \newline  
-[\url{https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/scintilla/lexers}]
-\end{center}
-\end{itemize}
+
 \subsection{Idea Of Implementation }
 In a similar way in which the Open edX platform uses an xmodule(html\_module.py) that
 handles the operation of its current html editor, similarly, using the same working principle
-we can replace our editor and load the html editor and configure it for proper working.  \newline
-
+we can replace our editor and load the html editor and configure it for proper working.  
 \section{Adobe Brackets}
 \subsection{About}
 With focused visual tools and preprocessor support, Brackets is a modern text editor that
@@ -199,108 +124,6 @@ debug any extension in brackets.
 \item It consists of a bracket (which is a root module) that pulls in other modules as dependencies.
 \item Some files where the required changes are to be made and importing those files so they can
 be used in building an editor for OpenEdx platform
-\end{itemize}
-\subsection{Links}
-Here are some links that would be helpful in knowing where the required code snippet
-regarding styling, languages, code formatting,etc, are present in Brackets: \newline
-\begin{itemize}
-\item SOURCE CODE :- 
-\begin{center}
-the source code of brackets is available on github repository :- \newline[\url{https://github.com/adobe/brackets}]
-\end{center}
-\item CODE FORMATTING :- 
-\begin{center}
-The code regarding code Formatting is found in the below link: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/styles/brackets_codemirror_override.less}]
-\end{center}
-\begin{center}
-the code regarding all the styles used in brackets are found in the below link: \newline
-[\url{https://github.com/adobe/brackets/tree/master/src/styles}]
-\end{center}
-\begin{center}
-code related to handling the color matching functionality is found in the below link:  \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/utils/ColorUtils.js}]
-\end{center}
-\item LIVE DEVELOPMENT :- 
-\begin{center}
-all the codes related to the Live Development Feature is found in the below link: \newline 
-[\url{https://github.com/adobe/brackets/tree/master/src/LiveDevelopment}]
-\end{center}
-\begin{center}
-the below link refers to the code that loads and reloads the inline stylesheets using CSS: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/Agents/CSSAgent.js}]
-\end{center}
-\begin{center}
-the code related to the Interaction of the debugger with the editor interface is found
-in the below link: \newline 
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/Agents/ScriptAgent.js}]
-\end{center}
-\begin{center}
-the code related to launching the live preview is found in the below 2 links: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/LiveDevMultiBrowser.js}]  \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/LiveDevelopment.js}]
-\end{center}
-\begin{center}
-the code related to the connection management of live Preview to Chrome is found
-in the below link : \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/Inspector/Inspector.js}]
-\end{center}
-\begin{center}
-the code related to the live Development integration into brackets is found in the
-below link:  \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/main.js}]
-\end{center}
-\item EDITOR :- 
-\begin{center}
-all the links related to the features of editors are included here: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/editor/}]
-\end{center}
-\begin{enumerate}
-\item CSS Inline Editor: 
-\begin{center}
- The code related to the CSS inline editor is found in the below link:  \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/main.js}]
-\end{center}
-\item Code Hint: 
-\begin{center} The codes related to the Quick Edit feature of the Brackets is found in the below
-link: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/editor/CodeHintList.js}]
-\end{center}
-\item Image Viewer:
-\begin{center}  the code realted to the uploaded image link given while writing the code is found in
-the below link: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/editor/ImageViewer.js}]
-\end{center}
-\end{enumerate}
-\item HTML CONTENTS :- 
-\begin{center}
-All the code related to the html contents is present down in the below link: \newline
-[\url{https://github.com/adobe/brackets/tree/master/src/htmlContent}]
-\end{center}
-\item ANIMATION :- 
-\begin{center}
-The code related to the Utilities dealing with animation in the user interface is found
-here in the below link: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/utils/AnimationUtils.js}]
-\end{center}
-\item DRAG AND DROP :- 
-\begin{center}
-the code related to the Drag and Drop feature is found here in the below link: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/utils/DragAndDrop.js}]
-\end{center}
-\item HIGHLIGHTING CODES :- 
-\begin{center}
-the code related to the Code Highlighting feature is found here in the below link: \newline
-[\url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/Agents/HighlightAgent.js}]
-\end{center}
-\item LANGUAGES SUPPORTED :- 
-\begin{center}
-the code regarding the identification of various languages such as Perl, Ruby,
-HTML, CSS , JS ,etc, is found in the below link: \newline 
-[\url{https://github.com/adobe/brackets/tree/master/src/language}]
-\newline  using the above reference we can include only those languages that we require and
-eliminate the others.
-\end{center}
 \end{itemize}
 \subsection{Idea Of Implementation}
 In a similar way in which the Open edX platform uses an xmodule(html\_module.py) that
@@ -351,68 +174,6 @@ creation of HTML WYSIWYG editors.
 CodeMirror and TinyMCE, so integrating with the OpenEdx platform would be
 quite simpler as all of then belong to the same working methodology.
 \end{itemize}
-\subsection{Links}
-Here are some reference links that would get in much detail about the working of
-ContentTools and how to include it in your project, how to enable some required essential
-plugins for having much more extra features.  \newline
-\begin{itemize}
-\item SETTING UP :- 
-\begin{center}
-[\url{https://developer.telerik.com/featured/a-review-of-contenttools-a-richcontent-editor/}]
-\end{center}
-\item SOURCE CODE :- 
-\begin{center}
-[\url{https://github.com/GetmeUK/ContentTools}]
-\end{center} 
-\item SAVING STRATEGIES :- 
-\begin{center}
-[\url{http://getcontenttools.com/tutorials/saving-strategies}]
-\end{center}
-\item DEMO :- 
-\begin{center}
-[\url{http://getcontenttools.com/demo}]
-\end{center}
-\item GETTING STARTED :- 
-\begin{center}
-[\url{http://getcontenttools.com/getting-started}]
-\end{center}
-\item HANDLING IMAGE UPLOADS :- 
-\begin{center}
-[\url{http://getcontenttools.com/tutorials/handling-image-uploads}]
-\end{center}
-\item ADDING AND MANAGING NEW TOOLS :-  
-\begin{center}
-[\url{http://getcontenttools.com/tutorials/adding-new-tools}]
-\end{center}
-\item MULTILINGUAL SUPPORT :- 
-\begin{center}
-[\url{http://getcontenttools.com/tutorials/multilingual-support}]
-\end{center}
-\item INTEGRATION OF CONTENTTOOLS WITH CMS :- 
-\begin{center}
-[\url{http://getcontenttools.com/tutorials/content-tools-plus-cms}]
-\end{center}
-\item DJANGO INTEGRATION :- 
-\begin{center}
-[\url{https://github.com/Cotidia/django-contenttools-demo}]
-\end{center}
-\item IMAGE UPLOADS USING CLOUDINARY :- 
-\begin{center}
-[\url{http://getcontenttools.com/tutorials/image-uploadswith-cloudinary}]
-\end{center}
-\item HTML string FOR FORMATTING :- 
-\begin{center}
-[\url{http://getcontenttools.com/api/html-string}]
-\end{center}
-\item CONTENT-SELECTION :- 
-\begin{center}
-[\url{http://getcontenttools.com/api/content-select}]
-\end{center}
-\item CONTENT-EDIT:- 
-\begin{center}
-[\url{http://getcontenttools.com/api/content-edit}]
-\end{center}
-\end{itemize}
 \subsection{Idea Of Implementation}
 In a similar way in which the Open edX platform uses an xmodule(html\_module.py) that
 handles the operation of its current html editor, similarly, using the same working principle
@@ -427,21 +188,18 @@ that occurred while installing was related to the npm package installer. \newlin
 The packages were not completely installed and hence npm threw an error while
 installing. \newline \newline
 Here is the log file that shows the errors that would be occurring , \newline 
-[\url{npm issues.docx}]
+[\url{https://drive.google.com/open?id=1KUe3jcAPg8DpxmhshPUBYPKya_B-oRSt}]
 \newline 
 \newline
 \textbf{SOLUTION :} To resolve this issue here are the things that are to be followed: \newline
 \begin{enumerate}
-\item Open your terminal and perform the following operations \newline
- \textbf
-{sudo apt-get update
-synaptic}
+\item Open your terminal and perform the following operations 
+\begin{center}\verb=sudo apt-get update synaptic=\end{center}
 \item A dailog box opensSearch for npm and node modules
 \item Delete those folders manually
 \item Save the changes and close the dialog.
-\item Open the terminal \newline
- \textbf
-{npm install --save ContentTools}
+\item Open the terminal and type in the following commands
+ \begin{center}\verb=npm install --save ContentTools=\end{center}
 
 \end{enumerate}
 \section{Advantages Of Approach1 Compared To Approach2}
@@ -459,3 +217,35 @@ CSS features and make it a lot more interactive for the students.
 between two HTML blocks in LMS. This is very important in order to provide an error free
 user experience.
 \end{enumerate}
+
+
+\section{References}
+The following links would be helpful in learning more about the working of the editors discussed previoulsy
+\begin{enumerate}
+\item\textbf{Notepad++}
+\begin{itemize}
+\item \url{https://github.com/notepad-plus-plus/notepad-plus-plus}
+\item \url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/lexlib/Accessor.cxx}
+\item \url{https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/scintilla/src/AutoComplete.cxx}
+\item \url{https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/scintilla/lexers}
+\item \url{https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/scintilla/lexlib}
+\end{itemize}
+\item\textbf{Adobe Brackets}
+\begin{itemize}
+\item \url{https://github.com/adobe/brackets}
+\item \url{https://github.com/adobe/brackets/blob/master/src/styles/brackets_codemirror_override.less}
+\item \url{https://github.com/adobe/brackets/tree/master/src/LiveDevelopment}
+\item \url{https://github.com/adobe/brackets/blob/master/src/LiveDevelopment/Agents/CSSAgent.js}
+\item \url{https://github.com/adobe/brackets/blob/master/src/editor/}
+\item \url{https://github.com/adobe/brackets/tree/master/src/htmlContent}
+\end{itemize}
+\item\textbf{ContentTools}
+\begin{itemize}
+\item \url{https://github.com/GetmeUK/ContentTools}
+\item \url{https://github.com/Cotidia/django-contenttools-demo}
+\item \url{http://getcontenttools.com/api/content-select}
+\item \url{http://getcontenttools.com/tutorials/content-tools-plus-cms}
+\end{itemize}
+\end{enumerate}
+
+
