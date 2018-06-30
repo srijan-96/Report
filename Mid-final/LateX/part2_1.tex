@@ -91,16 +91,16 @@ Xblock API remains unchanged.
 \chapter{Basics of developing an XBlock}
 \section{Introduction}
 XBlock is a way to create rich engaging courses. XBlock is a component architecture of edX, and a
-course can be builds from the different Blocks as pieces. On the other hand, XBlock will offer an
+course can be build from the different Blocks as pieces. On the other hand, XBlock will offer
 APIs and structure for other modules in the edX to comunicate with the course content since all
 other web applications in a online ecosystem needs to access the course content.\newline
 XBlock is the software development kit for edX-MOOC and it is written in python2. XBlock
 generally contains few python classes which create a small web application. So, to create new
-xblocks, a new module called xblock-sdk has been open sorurced. Creating a new xblock means
+xblocks, a new module called xblock-sdk has been open sourced. Creating a new xblock means
 creating a simple python installable python package with a class derived from the XBlock.
 
 \section{XBlock API and Runtimes}
-Any web application can be an XBlock runtime by implementing the XBlock API. Note that the
+Any web application can be an XBlock runtime by implementing the XBlock API. The
 XBlock API is not a RESTful API. XBlock runtimes can compose web pages out of XBlocks that
 were developed by programmers who do not need to know anything about the other components
 that a web page might be using or displaying.
@@ -115,7 +115,7 @@ applications in that they render only a small piece of a complete web page. Like
 XBlocks can represent components as small as a paragraph of text, a video, or a multiple choice
 input field, or as large as a section, a chapter, or an entire course.
 \section{Criteria}
-One must design your XBlock to meet two criteria:-
+One must design a XBlock to meet two criteria:-
 \begin{itemize}
 \item The XBlock must be independent of other XBlocks. Course teams must be able to use the
 XBlock without using other Xblocks.
@@ -156,7 +156,7 @@ To do this, we must complete the following steps.
 It is recommended that we create a directory in to store all our XBlock work, including a
 virtual environment, the XBlock SDK, and the XBlocks we develop.
 \begin{enumerate}
-\item At the command prompt, run the following command to create the directory.
+\item At the command prompt,we can run the following command to create the directory.
 \begin{center}\verb=$ mkdir xblock_development=\end{center}
 \item Change directories to the xblock\_development directory.
 \begin{center}\verb=$ cd xblock_development=\end{center}
@@ -164,13 +164,13 @@ virtual environment, the XBlock SDK, and the XBlocks we develop.
 The rest of our work will be from this directory.
 
 \subsubsection{Creating and activating an Virtual Environment}
-We must have a virtual environment tool installed on our computer. Then create the virtual
-environment in your xblock\_development directory.
+We must have a virtual environment tool installed on our computer. Then we can create the virtual
+environment in our xblock\_development directory.
 \begin{enumerate}
-\item At the command prompt in xblock\_development, run the following command to
+\item At the command prompt in xblock\_development,we can run the following command to
 create the virtual environment.
 \begin{center}\verb=$ virtualenv venv=\end{center}
-\item Run the following command to activate the virtual environment.
+\item Next Run the following command to activate the virtual environment.
 \begin{center}\verb=$ source venv/bin/activate=\end{center}
 \item When the virtual environment is activated, the command prompt shows the name of
 the virtual directory in parentheses.
@@ -183,17 +183,17 @@ The XBlock SDK is a Python application that helps us build new XBlocks. The XBlo
 SDK contains three main components:
 \begin{enumerate}
 \item An XBlock creation tool that builds the skeleton of a new XBlock.
-\item An XBlock runtime for viewing and testing your XBlocks during development.
-\item Sample XBlocks that you can use as the starting point for new XBlocks, and for your
+\item An XBlock runtime for viewing and testing our XBlocks during development.
+\item Sample XBlocks that we can use as the starting point for new XBlocks, and for our
 own learning.
 \end{enumerate}
 After we create and activate the virtual environment, we must clone the XBlock SDK and
-install its requirements. To do this, complete the following steps at a command prompt.
+install its requirements. To do this,we must complete the following steps at a command prompt.
 \begin{enumerate}
-\item In the xblock\_development directory, run the following command to clone the
+\item In the xblock\_development directory,we must run the following command to clone the
 XBlock SDK repository from GitHub.
 \begin{center}\verb=(venv) $ git clone https://github.com/edx/xblock-sdk.git=\end{center}
-\item Run the following command to change to the xblock-sdk directory.
+\item Next Run the following command to change to the xblock-sdk directory.
 \begin{center}\verb=(venv) $ cd xblock-sdk=\end{center}
 \item Run the following command to install the XBlock SDK requirements.
 \begin{center}\verb=(venv) $ pip install -r requirements/base.txt=\end{center}
@@ -216,7 +216,7 @@ and deploy it in the XBlock SDK.
 \end{itemize}
 
 \subsubsection{Creating an XBlock}
-We use the XBlock SDK to create skeleton files for an XBlock. To do this,we follow
+We use the XBlock SDK to create skeleton files for an XBlock. To do this,we can follow
 these steps at a command prompt.
 \begin{enumerate}
 \item Change to the xblock\_development directory, which contains the venv and xblocksdk
@@ -279,7 +279,7 @@ URL to comumicate with the server too.
 
 \section{Testing and Installing Created XBlock}
 \subsection{For Workbench}
-We can test a xblock, while running with edX or workbench. Install the xblock using following
+We can test a xblock, while running with edX or workbench. We can install the xblock using following
 commands and start as a local server, and open the browser to find the link for new xblock
 \begin{enumerate}
 \item Go to the root directory of new created xblock.
