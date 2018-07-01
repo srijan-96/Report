@@ -1,6 +1,6 @@
 \chapter{Approach I - Open edX intregation}
 After testing our hybrid local intregation, and setting up our developing environment for Open edX,
-the next phase was to integrate it with the running instance of Open edX on our Devstack
+the next phase was to integrate it with the running instance of Open edX on our Devstack.
 \section{Plan of action}
 The idea and plan behind intregating our running hybrid instance of CodeMirror in TinyMCE with
 Open edX is mentioned below:
@@ -20,8 +20,8 @@ which loads the WYSIWYG editor in Open edX.
 \item Learn how the html content is getting stored in the MongoDB .
 \item The idea was to wrap the html content inside an inframe before it gets stored in the
 Database. However this was to be done only when the course authors used internal
-CSS in thier courses.
-\item Similarly, while loading the content in LMS, it would be wrapped inside and iframe
+CSS in their courses.
+\item Similarly, while loading the content in LMS, it would be wrapped inside an iframe
 first and then rendered in order to produce the desired effect.
 \end{itemize}
 \end{enumerate}
@@ -29,7 +29,7 @@ first and then rendered in order to produce the desired effect.
 \section{Implementation}
 \subsection{Configuring TinyMCE to use updated CodeMirror v5.38.0}
 \begin{itemize}
-\item The CodeMirror and TinyMCE source files are located in the edx-platfrom can be found on
+\item The CodeMirror and TinyMCE source files are located in the edx-platfrom, can be found on
 the following path : \textit{\textbf{edx-platform/common/statis/js/vendor}}
 \item Inside the tinymce source code, we placed the updated version of CodeMirror in the plugins
 folder for TinyMCE.\newline The path was :
@@ -37,16 +37,16 @@ folder for TinyMCE.\newline The path was :
 \item Next we configured TinyMCE to use the updated CodeMirror as its raw HTML editor. This
 was done through making changes in the TinyMCE configuration file \textbf{edit.js} located here :\newline
 \textbf{\textit{edx-platform/common/lib/xmodule/xmodule/js/src/html/edit.js}}
-\item Similarly, while loading the content in LMS, it would be wrapped inside and iframe
+\item Similarly, while loading the content in LMS, it would be wrapped inside an iframe
 first and then rendered in order to produce the desired effect.
 \end{itemize}
 After performing the following steps we were able to configure TinyMCE to open our updated
 instance of CodeMirror v5.38.0 as its raw HTML editor succesfully. Features such as indentation,
-code-folding etc were working fine
+code-folding etc were working fine.
 
 \subsection{Using Iframes to enable internal CSS}
 \subsubsection{Issues faced}
-Once we were able to intreagte updated version of CodeMirror with TinyMCE, we tried testing
+Once we were able to intregate updated version of CodeMirror with TinyMCE, we tried testing
 internal CSS in our new editor. Our observations are mentioned below:
 \begin{itemize}
 \item  The effect of the internal CSS is only visible inside the WYSIWYG editor i.e inside
@@ -60,24 +60,24 @@ removes it. As a result of this, no effect of the CSS is visible in the actual c
 We tried to look into the issues by looking into openedx backend by logging at several places in
 several different xmodules and we failed. We discussed this issue with Aparna Ma’am(Mentor,
 IITBombayX team). She said that we were on a right track and we should play with backend
-through logs itself. Strangely enough, there were NO logs generated at all!! This lead us to a
-roadblock situation where we need to switch to another approach for checking out backend.
+through logs itself. Strangely enough, there were NO logs generated at all. This lead us to a
+roadblock situation where we needed to switch to another approach for checking out the backend.
 However, all of the ways went at least once through logging step which was not working on our
 devstack very well. We also discovered that the server provided to us for R\&D
 purposes(10.129.27.44) also was unable to generate any logs.
 \subsection{Need for change in approach}
 Because of these issues, we were facing a major roadblock ahead of us and hence we need to
-switch approaches. Now we had 2 more options, Xblock and integrating entirely a new editor into
+switch approaches. Now we had two more options, Xblock and integrating entirely a new editor into
 an already complex openedx system which does not even generate logs ! Another option was to
 reinstall devstack and see what causes devstack to not generate logs. But the clock was ticking and
-we only hand 2.5 weeks left for the internship period. We could have pursued approach 1 to the end
+we only hand two and a half weeks left for the internship period. We could have pursued approach I to the end
 and maybe end the internship without completing the project but we chose to change approach.
 \subsection{Why Xblock approach and not integrating editors such as
 contenttools/grapejs ?}
 Two main reasons:
 \begin{enumerate}
 \item If we wanted to integrate any of these with OpenEdx, we would need the logger to be working
-perfectly. And as described in the issues above, that is what kept us from pursuing approach 1 itself
+perfectly. And as described in the issues above, that is what kept us from pursuing approach I itself
 \item Xblocks are modular. If we decide to modify the system, we’re forcing the editor changes to all
 users. And probably some of these users don’t even need this advanced editor and features. On the
 other hand, if we make this into an xblock, it will be used by people who actually need it and know
