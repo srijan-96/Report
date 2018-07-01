@@ -135,7 +135,7 @@ For enabling the internal CSS we thought of two possible implementations:
 \begin{enumerate}
 \item\textbf{Using Iframes}\newline
 For this, we were planning to wrap the entire html content inside an iframe
-and add theming to the iframe.
+and then add theming to the iframe.
 \begin{itemize}
 \item Set the width of iframe to 100\%
 \item Set the height of iframe equal to the height of content of iframe
@@ -161,13 +161,13 @@ bootstrap, w3css which will make the course even more beautiful
 \item Implementaion is easier
 \item Wrapping data inside the iframes containerizes the data ensuring no mixing of
 CSS between two HTML blocks in LMS.
-\item The overhead of the second approach will be however very large, since parsing
+\item The overhead of the second approach will be very large, since parsing
 the DOM tree would take considerable amount of time and effort.
 \end{enumerate}
 
 
 \section{Implementation of our Local intregation}
-In the first phase of implementing our approach1 of updating the present editors, we
+In the first phase of implementing our approach of updating the present editors, we
 first downloaded both the editors onto our local machine and then integrated the latest
 version of CodeMirror and TinyMCE in our local machine. Later we integrated it with
 Django framework since Open edX uses Django framework in the back end as their Web
@@ -175,13 +175,13 @@ Application Framework. This step was done to give us a better insight into the i
 the present editors in Open edX with Django. The steps of our implementation are
 mentioned in brief below:
 \begin{enumerate}
-\item Firstly, we have download the latest version of CodeMirror and TinyMCE from their
+\item Firstly, we had downloaded the latest version of CodeMirror and TinyMCE from their
 github repositores and then tested them individually to check whether all the desired features
 are working or not.
-\item Secondly, we had download the latest version of the “codemirror-for-tinymce” plugin
+\item Secondly, we had downloaded the latest version of the “codemirror-for-tinymce” plugin
 from its git repo.
 \item Next we had replaced the default raw HTML editor of TinyMCE with our instance of the
-latest version of CodeMirror. This was done by configuring the init-tinymce.js file to use
+latest version of CodeMirror. This was done by configuring the \textbf{init-tinymce.js} file to use
 CodeMirror as an external plugin and thus load it as its default raw HTML editor.
 \item Later, for enabling the internal CSS we had encapsulated the entire html content of the
 editor into an iframe.
@@ -197,7 +197,7 @@ Django back end of Open edX.
 
 
 \section{Summary of our local intregation}
-After completing our local integration, firstly we have tested our local instances of
+After completing our local integration, firstly we had tested our local instances of
 TinyMCE and CodeMirror on the Django server. A brief summary of our observations are
 listed below.
 \begin{enumerate}
@@ -205,7 +205,7 @@ listed below.
 being script tag , audio tag etc.
 \item Almost every CSS style and attributes work fine. The exceptions are those style features
 which by default require a script tag to be implemented.
-\item CSS animations can be implemented and other third party HTML-and CSS -based design
+\item CSS animations can be implemented and other third party HTML-and CSS-based design
 templates such as Bootstrap can be linked and used without any error.
 \item We prepared a detailed Test Report which can be found here:\newline[\url{https://docs.google.com/spreadsheets/d/1AJQWfAG2NIjpxFZt2fnLPlKdhP2-q35KZ0DOmdb-F0w/edit#gid=0}]
 \item  Source code is available in our github repository here:\newline[\url{https://github.com/ashutoshbsathe/codemirror-in-tinymce}]
