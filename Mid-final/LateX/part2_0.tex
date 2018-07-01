@@ -119,12 +119,12 @@ edX
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Approach I - Local intregation}
+\chapter{Approach I - Local integration}
 \section{Updating the present version of Editors present in Open edX}
 Our first approach was to download the latest versions of TinyMCE, CodeMirror and
 the plugin “codemirror-for-tinymce” from their respective git repositories into our local
 Machine.\newline
-Next step was to intregate the two editors i.e., CodeMirror and TinyMCE using the plugin and
+Next step was to integrate the two editors i.e., CodeMirror and TinyMCE using the plugin and
 test it on our local machine, and later integrate it with Open edX using one of the Open edX developing
 environment.\newline
 The result would be TinyMCE loading the instance of latest version of CodeMirror as its
@@ -166,7 +166,7 @@ the DOM tree would take considerable amount of time and effort.
 \end{enumerate}
 
 
-\section{Implementation of our Local intregation}
+\section{Implementation of our Local integration}
 In the first phase of implementing our approach of updating the present editors, we
 first downloaded both the editors onto our local machine and then integrated the latest
 version of CodeMirror and TinyMCE in our local machine. Later we integrated it with
@@ -190,13 +190,13 @@ equal to the height of the html content.
 \item  We had made sure that the borders of iframe was set to zero to make it invisible so that
 the user experience is better and smooth.
 \item After completing our stand alone integration we merged it with a Django project to run
-our editor as an app in the Django server. This intregation was quite useful as Open edX
+our editor as an app in the Django server. This integration was quite useful as Open edX
 itself uses Django framework in its backend and it helped us in understanding about the
 Django back end of Open edX.
 \end{enumerate}
 
 
-\section{Summary of our local intregation}
+\section{Summary of our local integration}
 After completing our local integration, firstly we had tested our local instances of
 TinyMCE and CodeMirror on the Django server. A brief summary of our observations are
 listed below.
