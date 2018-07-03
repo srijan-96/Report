@@ -1,34 +1,33 @@
 \chapter{Research about Approach II}
-\section{Integration Of The other third party Editors}
+\section{Integration of  other third party editors}
 Just like CodeMirror and TinyMCE there are other third party open source text editors
-which meet all the prerequisites of our enhancement critera. Some of them are Notepad++,
+which meet all the prerequisites of our enhancement criteria. Some of them are Notepad++,
 Quill, Brackets, ContentTools, Grapejs,etc. As an alternative to our first approach we
-thought of another possibility of reaching our objective. Just like how the OpenEdx has
+thought of another possibility of reaching our objective. Just like how Open edX has
 merged two text editors for their HTML editor, similarly even we can try to integrate
 WYSWYG editor using the same methodology. In this approach we develop an entire new
 editor itself. Moreover since all these editors are open source their github repositories is
 easily accessible. So we also thought of trying to import the logic they used in their source
 code to add features such as code indentation ,code folding etc. We put this approach as our
-backup for our approach1 because, approach2 is a bit hacky and complicated to implement
-compared to approach1. 
+backup for our approach I because, approach II is a bit tough and complicated to implement
+compared to approach I
 \section{What kind of editors do we want?}  
 Before integrating here are some of the questions that we asked ourselves. \newline
 \begin{itemize}
-\item What kind of editor do we want...??
-\item What features does that editor should have..??
-\item How does these editors help with our motive..?? \newline 
+\item What kind of editor do we want ?
+\item What features should the editor have ?
+\item How does these editors help us with our motive ? \newline 
 \end{itemize}
 So here are few points that helped us clear our doubts: \newline
 \begin{itemize}
 \item We need an editor that makes our work easy, simple, and has got much better working
-properties as compared to the editor that is currently being used in the OpenEdx platform.
+properties as compared to the editor that is currently being used in the Open edX platform.
 \item The editor should have inbuilt features(code folding, pretty indentation,languages,etc) that
-could just wipe out the issues that are being faced by the openEdx html editor.
-\item Since our motive is to add features such as indendation , cold folding, internal css,etc, so
+could just wipe out the issues that are being faced by the Open edX html editor.
+\item Since our motive is to add features such as indendation, cold folding, internal css,etc, so
 considering an editor that has these features inbuilt, and integrating it by making some
-required changes might help us in achieving our motive, and would even resolve in
-eliminating the issues faced by the current HTML editor that is being used by the OpenEdx
-platform. \newline
+required changes might help us in achieving our motive, and would even resolve the 
+ issues faced by the current HTML editor that is being used by Open edX platform. \newline
 \end{itemize}
 
 After a bit of research work what we found out is some pretty good and well built editors
@@ -46,7 +45,7 @@ The detailed explanation about each editor follows.
 Notepad++ is a free (as in “free speech” and also as in “free beer”) open source code editor
 and Notepad replacement that supports several languages. Running in the operating system
 its use is governed by the GPL license. \newline\newline
-As of now the current version of the Notepad++ available in the market is v7.5.6. \newline
+Current stable verison of Notepad++  is v7.5.6. \newline
 \subsection{Features} 
 \begin{enumerate}
 \item Syntax Highlightning
@@ -70,7 +69,7 @@ Here are a list of things that we have found about notepad++ :
 \item All the syntax styling part is done using the Scintilla component.
 \item Scintilla edits and even is used for debugging the source code of the Notepad++
 \item Some files where the required changes are to be made and importing those files so they can
-be used in building an editor for OpenEdx platform. \newline
+be used in building an editor for Open edX platform. \newline
 \end{itemize}  
 
 \subsection{Idea Of Implementation }
@@ -122,7 +121,7 @@ debug any extension in brackets.
 \item Brackets has got more than 20 Dependencies .
 \item It consists of a bracket (which is a root module) that pulls in other modules as dependencies.
 \item Some files where the required changes are to be made and importing those files so they can
-be used in building an editor for OpenEdx platform
+be used in building an editor for Open edX platform
 \end{itemize}
 \subsection{Idea Of Implementation}
 In a similar way in which the Open edX platform uses an xmodule(html\_module.py) that
@@ -170,7 +169,7 @@ creation of HTML WYSIWYG editors.
 \item It has an ability to configure styles for your content.
 \item Contenttools can be easily integrated into the CMS.
 \item It is an opensource web-based HTML editor whose working is quite similar to
-CodeMirror and TinyMCE, so integrating with the OpenEdx platform would be
+CodeMirror and TinyMCE, so integrating with the Open edX platform would be
 quite simpler as all of then belong to the same working methodology.
 \end{itemize}
 \subsection{Idea Of Implementation}
@@ -180,7 +179,7 @@ we can replace our editor and load the html editor and configure it for proper w
 \newline
 Integrating this would be much easier compared to Brackets and Notepad++ as its working
 methodology is just as similar to the CodeMirror and TinyMCE which are being used as of
-now in the OpenEdx platform. \newline
+now in the Open edX platform. \newline
 \subsection{Installation Issues}
 Installing Notepad++ and Brackets easy was error free but with ContentTools the only issue
 that occurred while installing was related to the npm package installer. \newline
@@ -206,7 +205,7 @@ Here is the log file that shows the errors that would be occurring , \newline
 \item Upgrading something is always better than integrating something new altogether. As per
 our research and observation the versions of CodeMirror and TinyMCE in Open edX are
 outdated. Since the latest versions of these two editors fullfill our requirements updating the
-editors is much straighforward and sensible than incorporating two completedly new ediitors
+editors is much straightforward and sensible than incorporating two completely new ediitors
 into the Open edX platform, since it can lead to a lot of dependency issues.
 \item The iframe approach also allows the course content creator to include third party CSS
 such as bootstrap, w3css which will make the course even more interactive and boost
@@ -218,7 +217,7 @@ user experience.
 \end{enumerate}
 
 
-\section{References}
+\section{References for approach II}
 The following links would be helpful in learning more about the working of the editors discussed previoulsy
 \begin{enumerate}
 \item\textbf{Notepad++}

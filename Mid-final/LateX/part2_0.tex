@@ -1,5 +1,5 @@
 \chapter{Getting started}
-\section{Limitations of the present HTML editor in OpenEdx}
+\section{Limitations of the present HTML editor in Open edX}
 Open edX in itself is a humongous learning management system with unparalleled feature list. It is
 among the top MOOCs platforms in the world. As it is the way of the world, there is nothing perfect
 here and Open edX is not an exception. All applications/platforms have a scope to enhance its
@@ -9,11 +9,11 @@ While current HTML editor does the job well but it has got its own mind and beha
 uncertainty sometimes. Enhancing the editor with internal CSS and ironing out the indentation
 issues will boost the user experience of the course creator. Our aim was to develop and integrate a
 full-fledged HTML editor like Notepad++ or Sublime for Open edX.\newline\newline
-Here are some issues that we have encountered in the HTML editor used by the OpenEdx platform
+Here are some issues that we have encountered in the HTML editor used by the Open edX platform
 \begin{enumerate}
-  \item \textbf{Indentaion in the current HTML editor :-}\newline\newline
+  \item \textbf{Indentation in the current HTML editor :-}\newline\newline
 The purpose of code indentation and style is to make the program more readable and
-understandable. It saves lots of time while we revisit the code and use it.
+understandable. It saves lots of time when a developer revisits the code and uses it.
 Code indentaion in an important part towards increasing the aesthetic of any editor,
 as it increases readability and makes understanding of the code easier.\newline\newline
 In Open edX however the code indentation feature is not implemented in the raw
@@ -49,7 +49,7 @@ make future updates and style changes much easier to manage.\newline\newline
 If we had to only use inline styles, our documents would quickly become bloated and
 very hard to maintain. This is because inline styles must be applied to every element
 we want them on. That is why internal CSS is preferred whenever exhaustive use of
-CSS is required as opposed to inline CSS. Internal CSS is Open edx raw HTML
+CSS is required as opposed to inline CSS. Internal CSS is Open edX raw HTML
 editor is not supported as internal CSS must be defined inside the style tag in the
 head element of the html body. However the raw HTML editor of Open edX stips
 down style tags and the effects are not reflected as wanted. Styles of other
@@ -64,41 +64,44 @@ below:
 
 \section{Objectives}
 Here are the list of enhancements we were aiming for in the html component of Open edX:
+\begin{enumerate}
+  \item Improvise the raw HTML editor.\newline
+Expected features:
 \begin{itemize}
-  \item Improvise the raw HTML editor to have features like pretty indentation, code folding
-etc.
-  \item Check if we can add a separate CSS section in raw HTML editor to eliminate inline
-CSS
-\item Fix the cursor placement issue and some other minor issues.
+\item Pretty indentation
+\item Code folding
+\item Auto completion of tags
 \end{itemize}
+\item Check if we can add a separate CSS section in raw HTML editor to enable working of internal CSS.
+\item Fix the cursor placement issue.
+\item Enable inernal JavaScript.
+\item Adding support for all HTML tags.
+\end{enumerate}
 
 \section{Observations}
-Regarding the Open edX paltform and the editors used in the Open Edx one might come up with thefollowing kind of questions
+Regarding the Open edX paltform and the editors used in the Open edX one might come up with the following kind of questions
 \begin{itemize}
-\item Is OpenEdx using a raw editor or visual editor or both ?
-\item Did OpenEdx write their own editor ?
-\item If yes, then what how is it working ?
-\item If no, then from where they have implemented their text editors
+\item Is Open edX using a raw editor or visual editor or both ?
+\item Did Open edX write their own editor ?  If yes, then  how is it working ? If no, then from where they have implemented their text editors
 \item What kind of editor are they using ?
 \item Where do we find the editors source code ?
 \item How many editors are they using ?
 \item Their method of working ?
 \item Their current scenario ?
-\item On what basis is this editor working along with the OpenEdx platform ?\newline\newline
+\item On what basis is this editor working along with the Open edX platform ?\newline\newline
 \end{itemize}
 
 
-To all these queries here are some facts that would be helpful:
+To answer all these queries, here are some facts that would be helpful:
 \begin{enumerate}
-\item OpenEdx uses both the visual editor as well as the raw editor.
-\item OpenEdx has not written their own editor neither the visual editor nor the raw editor.
-\item OpenEdx uses open source text editors for this purpose.
+\item Open edX uses both the visual editor as well as the raw editor.
+\item Open edX has not written their own text editor.
 \item The visual editor is tinyMCE editor and the raw editor is CodeMirror Editor.
 \item These editors are located in edx source code, in github.
-\item CodeMirror is made to work in the custom mode configuration. OpenEdx is using a very old version of CodeMirror.
-\item The tinymce editor folder of openedx consists of a plugin called "codemirror-for-tinymce".
+\item CodeMirror is made to work in the custom mode configuration. Open edX is using a old version of CodeMirror.
+\item The tinymce editor folder of Open edX consists of a plugin called "codemirror-for-tinymce".
 \item The good thing about this plugin is that any version of codemirror can be used in the code and it will work perfectly fine.
-\item The “codemirror-for-tinymce” plugin is already in use in the OpenEdx repository.
+\item The “codemirror-for-tinymce” plugin is already in use in the Open edX repository.
 \item We can use the “codemirror-for-tinymce” plugin for tinymce 4.x.x versions.
 \item There is an xblock module or simply an xblock called html-module.py
 \item This particular xblock module handles the operation of the html editor.
@@ -108,19 +111,19 @@ To all these queries here are some facts that would be helpful:
 
 \section{Our plan of action}
 
-Depending on the facts that we uncovered regarding the html editors we have come up with
-two possible approaches initially, that would fulfill our required objectives.
+Depending on the facts that we uncovered regarding the html editors we had come up with
+two possible approaches initially, that would fulfil our required objectives.
 \begin{enumerate}
 
 \item\textbf{Approach I}\newline Updating the present version of WYSIWYG and raw HTML editors in Open
 edX
-\item\textbf{Approach II}\newline Integrating other third party open source text editors into OpenEdx platform.
+\item\textbf{Approach II}\newline Integrating other third party open source text editors into Open edX platform.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Approach I - Local integration}
-\section{Updating the present version of Editors present in Open edX}
+\section{Updating the current version of Editors present in Open edX}
 Our first approach was to download the latest versions of TinyMCE, CodeMirror and
 the plugin “codemirror-for-tinymce” from their respective git repositories into our local
 Machine.\newline
@@ -133,7 +136,7 @@ However this implementation could only solve the indentation and code folding pr
 but still the internal css problem wouldn’t be solved just with this.\newline\newline
 For enabling the internal CSS we thought of two possible implementations:
 \begin{enumerate}
-\item\textbf{Using Iframes}\newline
+\item\textbf{Using iframes}\newline
 For this, we were planning to wrap the entire html content inside an iframe
 and then add theming to the iframe.
 \begin{itemize}
@@ -154,7 +157,7 @@ Next we would have to manually select each and every child of the div by
 parsing the DOM (Document Object Model) tree and apply styles to it.\newline
 \end{enumerate}
 
-We opted for the first i.e the Iframe approach because of the following reasons:
+We opted for the first i.e the iframe approach because of the following reasons:
 \begin{enumerate}
 \item This method allows the course content creator to include third party CSS such as
 bootstrap, w3css which will make the course even more beautiful
@@ -175,17 +178,17 @@ Application Framework. This step was done to give us a better insight into the i
 the present editors in Open edX with Django. The steps of our implementation are
 mentioned in brief below:
 \begin{enumerate}
-\item Firstly, we had downloaded the latest version of CodeMirror and TinyMCE from their
+\item We had downloaded the latest version of CodeMirror and TinyMCE from their
 github repositores and then tested them individually to check whether all the desired features
 are working or not.
-\item Secondly, we had downloaded the latest version of the “codemirror-for-tinymce” plugin
+\item We downloaded the latest version of the “codemirror-for-tinymce” plugin
 from its git repo.
 \item Next we had replaced the default raw HTML editor of TinyMCE with our instance of the
 latest version of CodeMirror. This was done by configuring the \textbf{init-tinymce.js} file to use
 CodeMirror as an external plugin and thus load it as its default raw HTML editor.
 \item Later, for enabling the internal CSS we had encapsulated the entire html content of the
 editor into an iframe.
-\item We have then set the width of the iframe to 100 percent and set the height of the iframe
+\item We have then set the width of the iframe to 100\% and set the height of the iframe
 equal to the height of the html content.
 \item  We had made sure that the borders of iframe was set to zero to make it invisible so that
 the user experience is better and smooth.
@@ -203,7 +206,7 @@ listed below.
 \begin{enumerate}
 \item Most of the HTML tags and their atrributes are working fine. Some of the exceptions
 being script tag , audio tag etc.
-\item Almost every CSS style and attributes work fine. The exceptions are those style features
+\item Almost every CSS style and its attributes works fine. The exceptions are those style features
 which by default require a script tag to be implemented.
 \item CSS animations can be implemented and other third party HTML-and CSS-based design
 templates such as Bootstrap can be linked and used without any error.
@@ -235,9 +238,9 @@ extended\_valid\_elements properly in TinyMCE config.
 \item\textbf{Indentation in the “CodeMirror with TinyMCE setup” :}\newline\newline
 Now because the tinymce keeps filtering out content, there’s no actual way to show a
 nice indented code in CodeMirror. For this we found a script that will indent our
-html code nicely and we called it before setting the content in CodeMirror. One thing
-to note here is that whatever indentation that was done in CodeMirror was a bit of a
-pseudo Indentation and not true indentation as the course creator wants. Sure, it was
+html code nicely and we called it before setting the content in CodeMirror.\newline
+\textbf{Note :} Whatever indentation that was done in CodeMirror was a
+pseudo indentation and not true indentation as the course creator wants. The code is surely
 nicely indented, but if somewhere content creator specifically wanted a specific tag
 on multiple line such as
 \begin{verbatim}

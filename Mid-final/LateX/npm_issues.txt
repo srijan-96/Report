@@ -1,0 +1,455 @@
+pravallika@pravallika:~/ContentTools$ npm install
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated coffee-script@1.3.3: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated graceful-fs@1.2.3: please upgrade to graceful-fs 4 for compatibility with current and future versions of Node.js
+npm WARN deprecated coffee-script@1.7.1: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
+npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
+npm WARN deprecated tough-cookie@2.2.2: ReDoS vulnerability parsing Set-Cookie https://nodesecurity.io/advisories/130
+npm WARN deprecated win-spawn@2.0.0: use [cross-spawn](https://github.com/IndigoUnited/node-cross-spawn) or [cross-spawn-async](https://github.com/IndigoUnited/node-cross-spawn-async) instead.
+npm WARN prefer global babel@5.8.38 should be installed with -g
+
+> phantomjs@1.9.20 install /home/pravallika/ContentTools/node_modules/phantomjs
+> node install.js
+
+sh: 1: node: not found
+ContentTools@1.6.5 /home/pravallika/ContentTools
++-- es5-shim@4.5.10  extraneous
++-- es6-promise@3.3.1 
++-- es6-require@0.2.1 
+| +-- babel@5.8.38 
+| | +-- babel-core@5.8.38 
+| | | +-- babel-plugin-constant-folding@1.0.1 
+| | | +-- babel-plugin-dead-code-elimination@1.0.2 
+| | | +-- babel-plugin-eval@1.0.1 
+| | | +-- babel-plugin-inline-environment-variables@1.0.1 
+| | | +-- babel-plugin-jscript@1.0.4 
+| | | +-- babel-plugin-member-expression-literals@1.0.1 
+| | | +-- babel-plugin-property-literals@1.0.1 
+| | | +-- babel-plugin-proto-to-assign@1.0.4 
+| | | +-- babel-plugin-react-constant-elements@1.0.3 
+| | | +-- babel-plugin-react-display-name@1.0.3 
+| | | +-- babel-plugin-remove-console@1.0.1 
+| | | +-- babel-plugin-remove-debugger@1.0.1 
+| | | +-- babel-plugin-runtime@1.0.7 
+| | | +-- babel-plugin-undeclared-variables-check@1.0.2 
+| | | | `-- leven@1.0.2 
+| | | +-- babel-plugin-undefined-to-void@1.1.6 
+| | | +-- babylon@5.8.38 
+| | | +-- bluebird@2.11.0 
+| | | +-- debug@2.6.9 
+| | | | `-- ms@2.0.0 
+| | | +-- detect-indent@3.0.1 
+| | | | `-- minimist@1.2.0 
+| | | +-- esutils@2.0.2 
+| | | +-- globals@6.4.1 
+| | | +-- home-or-tmp@1.0.0 
+| | | | +-- os-tmpdir@1.0.2 
+| | | | `-- user-home@1.1.1 
+| | | +-- is-integer@1.0.7 
+| | | | `-- is-finite@1.0.2 
+| | | |   `-- number-is-nan@1.0.1 
+| | | +-- js-tokens@1.0.1 
+| | | +-- json5@0.4.0 
+| | | +-- minimatch@2.0.10 
+| | | | `-- brace-expansion@1.1.11 
+| | | |   +-- balanced-match@1.0.0 
+| | | |   `-- concat-map@0.0.1 
+| | | +-- private@0.1.8 
+| | | +-- regenerator@0.8.40 
+| | | | +-- commoner@0.10.8 
+| | | | | +-- detective@4.7.1 
+| | | | | | `-- acorn@5.5.3 
+| | | | | +-- iconv-lite@0.4.23 
+| | | | | | `-- safer-buffer@2.1.2 
+| | | | | +-- q@1.5.1 
+| | | | | `-- recast@0.11.23 
+| | | | |   +-- ast-types@0.9.6 
+| | | | |   `-- esprima@3.1.3 
+| | | | +-- defs@1.1.1 
+| | | | | +-- alter@0.2.0 
+| | | | | | `-- stable@0.1.8 
+| | | | | +-- ast-traverse@0.1.1 
+| | | | | +-- breakable@1.0.0 
+| | | | | +-- simple-fmt@0.1.0 
+| | | | | +-- simple-is@0.2.0 
+| | | | | +-- stringmap@0.2.2 
+| | | | | +-- stringset@0.2.1 
+| | | | | +-- tryor@0.1.2 
+| | | | | `-- yargs@3.27.0 
+| | | | |   +-- os-locale@1.4.0 
+| | | | |   | `-- lcid@1.0.0 
+| | | | |   |   `-- invert-kv@1.0.0 
+| | | | |   +-- window-size@0.1.4 
+| | | | |   `-- y18n@3.2.1 
+| | | | +-- esprima-fb@15001.1001.0-dev-harmony-fb 
+| | | | +-- recast@0.10.33 
+| | | | | `-- ast-types@0.8.12 
+| | | | `-- through@2.3.8 
+| | | +-- regexpu@1.3.0 
+| | | | +-- esprima@2.7.3 
+| | | | +-- regenerate@1.4.0 
+| | | | +-- regjsgen@0.2.0 
+| | | | `-- regjsparser@0.1.5 
+| | | |   `-- jsesc@0.5.0 
+| | | +-- repeating@1.1.3 
+| | | +-- resolve@1.7.1 
+| | | | `-- path-parse@1.0.5 
+| | | +-- shebang-regex@1.0.0 
+| | | +-- source-map-support@0.2.10 
+| | | | `-- source-map@0.1.32 
+| | | +-- to-fast-properties@1.0.3 
+| | | +-- trim-right@1.0.1 
+| | | `-- try-resolve@1.0.1 
+| | +-- chokidar@1.7.0 
+| | | +-- anymatch@1.3.2 
+| | | | +-- micromatch@2.3.11 
+| | | | | +-- arr-diff@2.0.0 
+| | | | | | `-- arr-flatten@1.1.0 
+| | | | | +-- array-unique@0.2.1 
+| | | | | +-- braces@1.8.5 
+| | | | | | +-- expand-range@1.8.2 
+| | | | | | | `-- fill-range@2.2.4 
+| | | | | | |   +-- is-number@2.1.0 
+| | | | | | |   +-- isobject@2.1.0 
+| | | | | | |   `-- randomatic@3.0.0 
+| | | | | | |     +-- is-number@4.0.0 
+| | | | | | |     +-- kind-of@6.0.2 
+| | | | | | |     `-- math-random@1.0.1 
+| | | | | | +-- preserve@0.2.0 
+| | | | | | `-- repeat-element@1.1.2 
+| | | | | +-- expand-brackets@0.1.5 
+| | | | | | `-- is-posix-bracket@0.1.1 
+| | | | | +-- extglob@0.3.2 
+| | | | | +-- filename-regex@2.0.1 
+| | | | | +-- kind-of@3.2.2 
+| | | | | | `-- is-buffer@1.1.6 
+| | | | | +-- object.omit@2.0.1 
+| | | | | | +-- for-own@0.1.5 
+| | | | | | | `-- for-in@1.0.2 
+| | | | | | `-- is-extendable@0.1.1 
+| | | | | +-- parse-glob@3.0.4 
+| | | | | | +-- glob-base@0.3.0 
+| | | | | | `-- is-dotfile@1.0.3 
+| | | | | `-- regex-cache@0.4.4 
+| | | | |   `-- is-equal-shallow@0.1.3 
+| | | | |     `-- is-primitive@2.0.0 
+| | | | `-- normalize-path@2.1.1 
+| | | |   `-- remove-trailing-separator@1.1.0 
+| | | +-- async-each@1.0.1 
+| | | +-- glob-parent@2.0.0 
+| | | +-- inherits@2.0.3 
+| | | +-- is-binary-path@1.0.1 
+| | | | `-- binary-extensions@1.11.0 
+| | | +-- is-glob@2.0.1 
+| | | | `-- is-extglob@1.0.0 
+| | | `-- readdirp@2.1.0 
+| | |   +-- minimatch@3.0.4 
+| | |   +-- readable-stream@2.3.6 
+| | |   | +-- isarray@1.0.0 
+| | |   | +-- process-nextick-args@2.0.0 
+| | |   | +-- safe-buffer@5.1.2 
+| | |   | `-- string_decoder@1.1.1 
+| | |   `-- set-immediate-shim@1.0.1 
+| | +-- commander@2.15.1 
+| | +-- convert-source-map@1.5.1 
+| | +-- fs-readdir-recursive@0.1.2 
+| | +-- glob@5.0.15 
+| | | +-- inflight@1.0.6 
+| | | | `-- wrappy@1.0.2 
+| | | `-- once@1.4.0 
+| | +-- lodash@3.10.1 
+| | +-- output-file-sync@1.1.2 
+| | | +-- graceful-fs@4.1.11 
+| | | `-- mkdirp@0.5.1 
+| | |   `-- minimist@0.0.8 
+| | +-- path-exists@1.0.0 
+| | +-- path-is-absolute@1.0.1 
+| | +-- slash@1.0.0 
+| | `-- source-map@0.5.7 
+| `-- babel-runtime@5.8.38 
+|   `-- core-js@1.2.7 
++-- grunt@0.4.5 
+| +-- async@0.1.22 
+| +-- coffee-script@1.3.3 
+| +-- colors@0.6.2 
+| +-- dateformat@1.0.2-1.2.3 
+| +-- eventemitter2@0.4.14 
+| +-- exit@0.1.2 
+| +-- findup-sync@0.1.3 
+| | +-- glob@3.2.11 
+| | | `-- minimatch@0.3.0 
+| | `-- lodash@2.4.2 
+| +-- getobject@0.1.0 
+| +-- glob@3.1.21 
+| | +-- graceful-fs@1.2.3 
+| | `-- inherits@1.0.2 
+| +-- grunt-legacy-log@0.1.3 
+| | +-- grunt-legacy-log-utils@0.1.1 
+| | | +-- lodash@2.4.2 
+| | | `-- underscore.string@2.3.3 
+| | +-- lodash@2.4.2 
+| | `-- underscore.string@2.3.3 
+| +-- grunt-legacy-util@0.2.0 
+| | `-- lodash@0.9.2 
+| +-- hooker@0.2.3 
+| +-- iconv-lite@0.2.11 
+| +-- js-yaml@2.0.5 
+| | +-- argparse@0.1.16 
+| | | +-- underscore@1.7.0 
+| | | `-- underscore.string@2.4.0 
+| | `-- esprima@1.0.4 
+| +-- lodash@0.9.2 
+| +-- minimatch@0.2.14 
+| | +-- lru-cache@2.7.3 
+| | `-- sigmund@1.0.1 
+| +-- nopt@1.0.10 
+| | `-- abbrev@1.1.1 
+| +-- rimraf@2.2.8 
+| +-- underscore.string@2.2.1 
+| `-- which@1.0.9 
++-- grunt-contrib-clean@0.6.0 
++-- grunt-contrib-coffee@0.11.1 
+| +-- chalk@0.5.1 
+| | +-- ansi-styles@1.1.0 
+| | +-- escape-string-regexp@1.0.5 
+| | +-- has-ansi@0.1.0 
+| | | `-- ansi-regex@0.2.1 
+| | +-- strip-ansi@0.3.0 
+| | `-- supports-color@0.2.0 
+| +-- coffee-script@1.7.1 
+| | `-- mkdirp@0.3.5 
+| `-- lodash@2.4.2 
++-- grunt-contrib-concat@0.5.1 
+| +-- chalk@0.5.1 
+| | +-- ansi-styles@1.1.0 
+| | +-- has-ansi@0.1.0 
+| | | `-- ansi-regex@0.2.1 
+| | +-- strip-ansi@0.3.0 
+| | `-- supports-color@0.2.0 
+| `-- source-map@0.3.0 
+|   `-- amdefine@1.0.1 
++-- grunt-contrib-sass@0.8.1 
+| +-- async@0.9.2 
+| +-- chalk@0.5.1 
+| | +-- ansi-styles@1.1.0 
+| | +-- has-ansi@0.1.0 
+| | | `-- ansi-regex@0.2.1 
+| | +-- strip-ansi@0.3.0 
+| | `-- supports-color@0.2.0 
+| +-- dargs@2.1.0 
+| `-- win-spawn@2.0.0 
++-- grunt-contrib-uglify@0.7.0 
+| +-- chalk@0.5.1 
+| | +-- ansi-styles@1.1.0 
+| | +-- has-ansi@0.1.0 
+| | | `-- ansi-regex@0.2.1 
+| | +-- strip-ansi@0.3.0 
+| | `-- supports-color@0.2.0 
+| +-- lodash@2.4.2 
+| +-- maxmin@1.1.0 
+| | +-- chalk@1.1.3 
+| | | +-- ansi-styles@2.2.1 
+| | | +-- has-ansi@2.0.0 
+| | | | `-- ansi-regex@2.1.1 
+| | | +-- strip-ansi@3.0.1 
+| | | `-- supports-color@2.0.0 
+| | +-- figures@1.7.0 
+| | +-- gzip-size@1.0.0 
+| | | +-- browserify-zlib@0.1.4 
+| | | | `-- pako@0.2.9 
+| | | `-- concat-stream@1.5.0 
+| | |   +-- readable-stream@2.0.6 
+| | |   | +-- process-nextick-args@1.0.7 
+| | |   | `-- string_decoder@0.10.31 
+| | |   `-- typedarray@0.0.6 
+| | `-- pretty-bytes@1.0.4 
+| |   +-- get-stdin@4.0.1 
+| |   `-- meow@3.7.0 
+| |     +-- camelcase-keys@2.1.0 
+| |     | `-- camelcase@2.1.1 
+| |     +-- loud-rejection@1.6.0 
+| |     | +-- currently-unhandled@0.4.1 
+| |     | | `-- array-find-index@1.0.2 
+| |     | `-- signal-exit@3.0.2 
+| |     +-- map-obj@1.0.1 
+| |     +-- normalize-package-data@2.4.0 
+| |     | +-- hosted-git-info@2.6.0 
+| |     | +-- is-builtin-module@1.0.0 
+| |     | | `-- builtin-modules@1.1.1 
+| |     | +-- semver@4.3.6 
+| |     | `-- validate-npm-package-license@3.0.3 
+| |     |   +-- spdx-correct@3.0.0 
+| |     |   | `-- spdx-license-ids@3.0.0 
+| |     |   `-- spdx-expression-parse@3.0.0 
+| |     |     `-- spdx-exceptions@2.1.0 
+| |     +-- read-pkg-up@1.0.1 
+| |     | +-- find-up@1.1.2 
+| |     | | +-- path-exists@2.1.0 
+| |     | | `-- pinkie-promise@2.0.1 
+| |     | |   `-- pinkie@2.0.4 
+| |     | `-- read-pkg@1.1.0 
+| |     |   +-- load-json-file@1.1.0 
+| |     |   | +-- parse-json@2.2.0 
+| |     |   | | `-- error-ex@1.3.1 
+| |     |   | |   `-- is-arrayish@0.2.1 
+| |     |   | +-- pify@2.3.0 
+| |     |   | `-- strip-bom@2.0.0 
+| |     |   |   `-- is-utf8@0.2.1 
+| |     |   `-- path-type@1.1.0 
+| |     +-- redent@1.0.0 
+| |     | +-- indent-string@2.1.0 
+| |     | | `-- repeating@2.0.1 
+| |     | `-- strip-indent@1.0.1 
+| |     `-- trim-newlines@1.0.0 
+| +-- uglify-js@2.8.29 
+| | +-- uglify-to-browserify@1.0.2 
+| | `-- yargs@3.10.0 
+| |   +-- camelcase@1.2.1 
+| |   +-- cliui@2.1.0 
+| |   | +-- center-align@0.1.3 
+| |   | | +-- align-text@0.1.4 
+| |   | | | +-- longest@1.0.1 
+| |   | | | `-- repeat-string@1.6.1 
+| |   | | `-- lazy-cache@1.0.4 
+| |   | +-- right-align@0.1.3 
+| |   | `-- wordwrap@0.0.2 
+| |   `-- window-size@0.1.0 
+| `-- uri-path@0.0.2 
++-- grunt-contrib-watch@0.6.1 
+| +-- async@0.2.10 
+| +-- gaze@0.5.2 
+| | `-- globule@0.1.0 
+| |   +-- glob@3.1.21 
+| |   | +-- graceful-fs@1.2.3 
+| |   | `-- inherits@1.0.2 
+| |   +-- lodash@1.0.2 
+| |   `-- minimatch@0.2.14 
+| +-- lodash@2.4.2 
+| `-- tiny-lr-fork@0.0.5 
+|   +-- debug@0.7.4 
+|   +-- faye-websocket@0.4.4 
+|   +-- noptify@0.0.3 
+|   | `-- nopt@2.0.0 
+|   `-- qs@0.5.6 
++-- grunt-cssnano@2.1.0 
+| `-- cssnano@3.10.0 
+|   +-- autoprefixer@6.7.7 
+|   | +-- browserslist@1.7.7 
+|   | | `-- electron-to-chromium@1.3.48 
+|   | +-- caniuse-db@1.0.30000846 
+|   | +-- normalize-range@0.1.2 
+|   | `-- num2fraction@1.2.2 
+|   +-- decamelize@1.2.0 
+|   +-- defined@1.0.0 
+|   +-- has@1.0.1 
+|   | `-- function-bind@1.1.1 
+|   +-- object-assign@4.1.1 
+|   +-- postcss@5.2.18 
+|   | +-- js-base64@2.4.5 
+|   | `-- supports-color@3.2.3 
+|   |   `-- has-flag@1.0.0 
+|   +-- postcss-calc@5.3.1 
+|   | +-- postcss-message-helpers@2.0.0 
+|   | `-- reduce-css-calc@1.3.0 
+|   |   +-- balanced-match@0.4.2 
+|   |   +-- math-expression-evaluator@1.2.17 
+|   |   `-- reduce-function-call@1.0.2 
+|   |     `-- balanced-match@0.4.2 
+|   +-- postcss-colormin@2.2.2 
+|   | `-- colormin@1.1.2 
+|   |   +-- color@0.11.4 
+|   |   | +-- clone@1.0.4 
+|   |   | +-- color-convert@1.9.1 
+|   |   | | `-- color-name@1.1.3 
+|   |   | `-- color-string@0.3.0 
+|   |   `-- css-color-names@0.0.4 
+|   +-- postcss-convert-values@2.6.1 
+|   +-- postcss-discard-comments@2.0.4 
+|   +-- postcss-discard-duplicates@2.1.0 
+|   +-- postcss-discard-empty@2.1.0 
+|   +-- postcss-discard-overridden@0.1.1 
+|   +-- postcss-discard-unused@2.2.3 
+|   | `-- uniqs@2.0.0 
+|   +-- postcss-filter-plugins@2.0.3 
+|   +-- postcss-merge-idents@2.1.7 
+|   +-- postcss-merge-longhand@2.0.2 
+|   +-- postcss-merge-rules@2.1.2 
+|   | +-- caniuse-api@1.6.1 
+|   | | +-- lodash.memoize@4.1.2 
+|   | | `-- lodash.uniq@4.5.0 
+|   | +-- postcss-selector-parser@2.2.3 
+|   | | +-- flatten@1.0.2 
+|   | | +-- indexes-of@1.0.1 
+|   | | `-- uniq@1.0.1 
+|   | `-- vendors@1.0.2 
+|   +-- postcss-minify-font-values@1.0.5 
+|   +-- postcss-minify-gradients@1.0.5 
+|   +-- postcss-minify-params@1.2.2 
+|   | `-- alphanum-sort@1.0.2 
+|   +-- postcss-minify-selectors@2.1.1 
+|   +-- postcss-normalize-charset@1.1.1 
+|   +-- postcss-normalize-url@3.0.8 
+|   | +-- is-absolute-url@2.1.0 
+|   | `-- normalize-url@1.9.1 
+|   |   +-- prepend-http@1.0.4 
+|   |   +-- query-string@4.3.4 
+|   |   | `-- strict-uri-encode@1.1.0 
+|   |   `-- sort-keys@1.1.2 
+|   |     `-- is-plain-obj@1.1.0 
+|   +-- postcss-ordered-values@2.2.3 
+|   +-- postcss-reduce-idents@2.4.0 
+|   +-- postcss-reduce-initial@1.0.1 
+|   +-- postcss-reduce-transforms@1.0.4 
+|   +-- postcss-svgo@2.1.6 
+|   | +-- is-svg@2.1.0 
+|   | | `-- html-comment-regex@1.1.1 
+|   | `-- svgo@0.7.2 
+|   |   +-- coa@1.0.4 
+|   |   +-- colors@1.1.2 
+|   |   +-- csso@2.3.2 
+|   |   | `-- clap@1.2.3 
+|   |   +-- js-yaml@3.7.0 
+|   |   | +-- argparse@1.0.10 
+|   |   | | `-- sprintf-js@1.0.3 
+|   |   | `-- esprima@2.7.3 
+|   |   +-- sax@1.2.4 
+|   |   `-- whet.extend@0.9.9 
+|   +-- postcss-unique-selectors@2.0.2 
+|   +-- postcss-value-parser@3.3.0 
+|   `-- postcss-zindex@2.2.0 
++-- jasmine-core@2.99.1  extraneous
+`-- temporary@0.0.8  extraneous
+
+npm WARN optional Skipping failed optional dependency /chokidar/fsevents:
+npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.2.4
+npm WARN ContentTools@1.6.5 No license field.
+npm ERR! Linux 4.10.0-28-generic
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
+npm ERR! node v4.2.6
+npm ERR! npm  v3.5.2
+npm ERR! file sh
+npm ERR! code ELIFECYCLE
+npm ERR! errno ENOENT
+npm ERR! syscall spawn
+
+npm ERR! phantomjs@1.9.20 install: `node install.js`
+npm ERR! spawn ENOENT
+npm ERR! 
+npm ERR! Failed at the phantomjs@1.9.20 install script 'node install.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the phantomjs package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node install.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs phantomjs
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls phantomjs
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/pravallika/ContentTools/npm-debug.log
+
+

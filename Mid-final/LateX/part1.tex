@@ -2,43 +2,42 @@
 
 Open edX is a widely used and very popular MOOC platform. The Open edX software is a opensource
 technology that makes learning easier and studying faster. It was created by MIT and
-Harvard University, and was quick to gain support of universities such as UC Berkely, Georgetown,
+Harvard University, and was quick to gain support of universities such as UC Berkeley, Georgetown,
 and Stanford.\newline
 The software platform is designed to engage students and teachers in an interactive, modular way. It
 promotes active learning by video snippets, interactive components and game-like experience. The
 course content is presented through learning sequences: a set of interwoven videos, readings,
 discussions, wikis, collaborative and social media tools, exercises and materials with automatic
 assessments and instant feedback.\newline
-The Open edX project is a global success. It powers major MOOC initiatives, hosting blended and
-online courses, all around the world.
+
 
 \section{Purpose}
-“Advanced HTML Xblock for Open edX” is a project undertaken by the Content team at IIT
-Bombay,Summer Internship 2018, which focusses towards providing additional features and
-functionalities to the Raw HTML editor component in Open edX in the form of a XBlock. The
+“Advanced HTML XBlock for Open edX” is a project undertaken by the Content team at IIT
+Bombay, Summer Internship 2018, which focusses towards providing additional features and
+functionalities to the Raw HTML editor component in Open edX in the form of an XBlock. The
 project’s aim is to provide course authors with an Advanced HTML editor XBlock, so that can
 structure and style their courses better using the advanced and easy to use functionalities of the new
-editor. Open edX in itself is a humongous learning management system with unparalleled feature
+editor. Open edX in itself is a huge learning management system with an unparalleled feature
 list. It is among the top MOOCs platforms in the world. As it is the way of the world, there is
 nothing perfect here and Open edX is not an exception. All applications/platforms have a scope to
-enhance its features and abilities of its components. In this project we worked on enhancing the
+enhance its features and abilities of its components. In this project, we worked on enhancing the
 HTML component which is used for content creation in courses.
 
 \section{Motivation}
 One of the major features and quality of the edx-platform is the interactivity and the layout of the
 courses. While current HTML editor does the job well but it has got its own mind and behaves with
 uncertainty sometimes. This advanced HTML Xblock will boost the user experience of the course
-creator.Through this advanced HTML XBlock Course authors who prefer editing Raw HTML over
-using WYSIWYG editors can do so with relative ease. They will be having full control over the
+creator. Through this advanced HTML XBlock Course authors who prefer editing Raw HTML over
+using WYSIWYG(What you see is what you get) editors can do so with relative ease. They will be having full control over the
 code that constitutes the course chapters and section and edit them as they seem relevant. They can
-even add their custom styling and other third party style features thus making the course layout
+even add their custom styling and other third-party style features thus making the course layout
 more readable and interactive. This will also make the contents interesting for the students to view
 and learn from.
 
 \section{Scope}
-This product aims at providing course authors with a full fledged HTML editor for course content
-creation. It is an additional feature, which means that any one who has a background in the fields of
-HTML,CSS etc can add our XBlock into their course settings and use it as they find relevant. It’s
+This product aims at providing course authors with a full-fledged HTML editor for course content
+creation. It is an additional feature, which means that anyone who has a background in the fields of
+HTML, CSS etc can add our XBlock into their course settings and use it as they find relevant. Its
 functionality is basically in the hands of course content creators who may use it to hard code their
 entire course and use their own custom styles and attributes.
 
@@ -112,7 +111,7 @@ courses are being used.
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{images/edx_pipeline_0.png}
-	\caption{Open EdX Pipeline}
+	\caption{Open edX Pipeline}
 	\label{Fig.2:Open edX Pipeline}
 \end{figure}
 
@@ -137,7 +136,7 @@ search and the comments service.
 
 \chapter{XBlocks - The component architecture of Open edX}
 
-\section{What is an XBlock}
+\section{What is an XBlock ?}
 The XBlock specification is a component architecture designed to make it easier to create new
 online educational experiences. An XBlock is the basic building block of any edX course. It
 controls its own data structure (\textbf{model}), its own HTML rendering (\textbf{view}), and its own business logic
@@ -203,7 +202,7 @@ process that created it ceases or the machine it is running on is powered off.
 
 \subsection{Data Access and Persistence in edX platform}
 This part describes how the edx-platform does CRUD (Create, Read, Update, Delete) operations on
-xblocks and other models and backs those operations with persistence. Currently open-edx uses
+xblocks and other models and backs those operations with persistence. Currently Open edX uses
 Django's ORM backed by a SQL DB as the persistence layer for user-relative data. The user history
 data is moved to a non-SQL db(Mongo db).
 
@@ -258,7 +257,7 @@ servers via FTP and WebDAV, and version control system such as Subversion or Git
 	\item One can work with the HTML components in a “visual ” or WYSIWYG editor that hides the
 HTML code details, or in a “raw” editor that is required to mark up the content.
 \end{itemize}
-The open edx platform uses the following three JavaScript editors presently :-
+The Open edX platform uses the following three JavaScript editors presently :-
 \begin{enumerate}
 	\item TinyMCE
 	\item CodeMirror
@@ -268,7 +267,7 @@ The open edx platform uses the following three JavaScript editors presently :-
 \section{Options for editing HTML components}
 To work with HTML component, two different editing interfaces can be used.
 \begin{itemize}
-	\item \textbf{Visual Editor (TinyMCE) }\newline
+	\item \textbf{Visual Editor (TinyMCE) }
 		\begin{enumerate}
 			\item This interface is almost similar to the interface of “MS Word”.
 			\item Using the visual editor one can create, edit, add links \& images and format content
@@ -276,7 +275,7 @@ without using HTML markup directly.
 			\item The visual editor includes an HTML option for reviewing the HTML markup and can
 make any changes to the content if we want
 		\end{enumerate}
-	\item \textbf{Raw HTML Editor (CodeMirror) }\newline
+	\item \textbf{Raw HTML Editor (CodeMirror) }
 		\begin{enumerate}
 			\item It is a text editor and it does not offer a toolbar with formatting options.
 			\item This is used to markup content directly with HTML markup.
@@ -304,7 +303,7 @@ is needed.
 	\item Challenges involved in updating :
 		\begin{enumerate}
 			\item The installed version of TinyMCE is very old
-			\item It is not accessible
+			\item It is not accessible (Accessible here means accessibility to browser screen readers.)
 			\item There are large number of edX specific modifications that will be harder to migrate
 		\end{enumerate}
 \end{itemize}
@@ -336,7 +335,7 @@ is needed.
 		\begin{enumerate}
 			\item WMD/PageDown is a dead project
 			\item WMD is not fully accessible
-			\item There are a lot of custom edX modifications thaat will be hard to support going forward
+			\item There are a lot of custom edX modifications that will be hard to support going forward
 		\end{enumerate}
 \end{itemize}
 

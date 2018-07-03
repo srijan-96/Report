@@ -1,5 +1,5 @@
 \chapter{Approach I - Open edX integration}
-After testing our hybrid local integration, and setting up our developing environment for Open edX,
+After testing our hybrid local integration and setting up our development environment for Open edX,
 the next phase was to integrate it with the running instance of Open edX on our Devstack.
 \section{Plan of action}
 The idea and plan behind integrating our running hybrid instance of CodeMirror in TinyMCE with
@@ -11,7 +11,7 @@ Open edX is mentioned below:
 leaving the older version untouched.
 \item Configure TinyMCE to open the updated version of CodeMirror as its raw HTML
 editor.
-\item Test the updated CodeMirror in TinyMCE and see if its wroking as expected.
+\item Test the updated CodeMirror in TinyMCE and see if it's working as expected.
 \end{itemize}
 \item\textbf{Enabling internal CSS}
 \begin{itemize}
@@ -37,14 +37,12 @@ folder for TinyMCE.\newline The path was :
 \item Next we configured TinyMCE to use the updated CodeMirror as its raw HTML editor. This
 was done through making changes in the TinyMCE configuration file \textbf{edit.js} located here :\newline
 \textbf{\textit{edx-platform/common/lib/xmodule/xmodule/js/src/html/edit.js}}
-\item Similarly, while loading the content in LMS, it would be wrapped inside an iframe
-first and then rendered in order to produce the desired effect.
 \end{itemize}
 After performing the following steps we were able to configure TinyMCE to open our updated
 instance of CodeMirror v5.38.0 as its raw HTML editor succesfully. Features such as indentation,
 code-folding etc were working fine.
 
-\subsection{Using Iframes to enable internal CSS}
+\subsection{Using iframes to enable internal CSS}
 \subsubsection{Issues faced}
 Once we were able to integrate updated version of CodeMirror with TinyMCE, we tried testing
 internal CSS in our new editor. Our observations are mentioned below:
@@ -56,33 +54,33 @@ removes it. As a result of this, no effect of the CSS is visible in the actual c
 \end{itemize}
 
 \section{Change in Approach}
-\subsection{What happened to the issues}
-We tried to look into the issues by looking into openedx backend by logging at several places in
+\subsection{What happened to the issues ?}
+We tried to look into the issues by looking into Open edX backend by logging at several places in
 several different xmodules and we failed. We discussed this issue with Aparna Ma’am(Mentor,
-IITBombayX team). She said that we were on a right track and we should play with backend
-through logs itself. Strangely enough, there were NO logs generated at all. This lead us to a
+IITBombayX team). She said that we were on a right track and we should explore the backend
+through logs itself. Strangely enough, we were unable to see any logs generated. This lead us to a
 roadblock situation where we needed to switch to another approach for checking out the backend.
 However, all of the ways went at least once through logging step which was not working on our
-devstack very well. We also discovered that the server provided to us for R\&D
-purposes(10.129.27.44) also was unable to generate any logs.
+devstack very well. We also discovered that we were unable to see logs in the  R\&D
+server(10.129.27.44) which was provided to us.
 \subsection{Need for change in approach}
-Because of these issues, we were facing a major roadblock ahead of us and hence we need to
-switch approaches. Now we had two more options, Xblock and integrating entirely a new editor into
-an already complex openedx system which does not even generate logs ! Another option was to
-reinstall devstack and see what causes devstack to not generate logs. But the clock was ticking and
+Because of these issues, we were facing a major roadblock ahead of us and hence we needed to
+switch approaches. Now we had two more options, Xblock or integrating entirely a new editor.
+Integrating a new editor in Open edX platform would also require accesing the log files frequently which weren't able to do.
+ Another option was to reinstall devstack and see what causes devstack to not generate logs, but the clock was ticking and
 we only hand two and a half weeks left for the internship period. We could have pursued approach I to the end
 and maybe end the internship without completing the project but we chose to change approach.
 \subsection{Why Xblock approach and not integrating editors such as
 contenttools/grapejs ?}
 Two main reasons:
 \begin{enumerate}
-\item If we wanted to integrate any of these with OpenEdx, we would need the logger to be working
-perfectly. And as described in the issues above, that is what kept us from pursuing approach I itself
+\item If we wanted to integrate any of these with Open edX, we would need the logger to be working
+perfectly. As described in the issues above, that is what kept us from pursuing approach I itself
 \item Xblocks are modular. If we decide to modify the system, we’re forcing the editor changes to all
-users. And probably some of these users don’t even need this advanced editor and features. On the
+users. Some of these users don’t  need this advanced editor and features. On the
 other hand, if we make this into an xblock, it will be used by people who actually need it and know
-how to use it. Also one hidden advantage of xblock is that they are largely platform independent.
-Most of the xblocks do not need to be updated on every single version of openedx since the core
+how to use it. A hidden advantage of xblock is that they are largely platform independent.
+Most of the xblocks do not need to be updated on every single version of Open edX since the core
 Xblock API remains unchanged.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,7 +122,7 @@ different XBlocks in flexible ways.
 \end{itemize}
 
 \section{Building an Xblock}
-\subsection{Instalingl XBlock Prerequisites}
+\subsection{Instaling XBlock Prerequisites}
 To build an XBlock, we must have the following tools on our computer.
 \begin{itemize}
 \item Python 2.7
@@ -263,7 +261,7 @@ page. The view also takes the help of CSS and JavaScript to help the html pages.
 \item \textbf{Define Handlers:}\newline
 When course web pages are interactive, we will get events from the Javascript to
 handle. So, handler is a function to respond to a specific URL. Here we can use the
-URL to comumicate with the server too.
+URL to communicate with the server too.
 \end{enumerate}
 
 

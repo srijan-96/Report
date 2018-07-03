@@ -226,20 +226,9 @@ to the homepage of each service. Since some services are not meant to be user-fa
 	\hline
 	\end{tabular}
 \end{center}
-
-\section{Why OpenEdx might have moved to a docker based installation ?}
-In vagrant based installation, the images are being provided by virtualbox which in trun slows
-down the performance of the system. On the other hand docker uses containers for
-virtualizing andt this is a vast difference in approaches.\newline
-In a docker container, the image contains only the data it needs and the rest of the
-data/packages are installed on/fetched from host machine which dramatically improves
-performance. Also in docker based devstack, each service has it’s own dedicated container
-which is accessible through machine. This makes the developer’s access to each service
-individually very easy which in turn speeds up debugging and development rate.\newline
-
 \section{Issues and solutions}
 During the course of our Docker based installation and configuration of Open edX Devstack,
-we faced multipled issues such as poxy settings etc. The issues are mentioned below along
+we faced multiple issues such as proxy settings etc. The issues are mentioned below along
 with the solutions we used to overcome them.
 \begin{enumerate}
 	\item \textbf{Proxy configuration of the system :}\newline
